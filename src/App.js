@@ -4,6 +4,7 @@ import './App.css';
 // containers
 import IntroContainer from './containers/IntroContainer.jsx';
 import NavContainer from './containers/NavContainer.jsx';
+import FooterContainer from './containers/FooterContainer.jsx'
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
       <div>
         <NavContainer />
         <IntroContainer />
+        <FooterContainer />
       </div>
     );
     // return (
