@@ -1,0 +1,13 @@
+.content {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    background: #e0ffff;
+    padding: 10px;
+}
+
+.contentItem {
+    justify-content: space-around;
+    text-align: center;
+    margin: 15px;
+}

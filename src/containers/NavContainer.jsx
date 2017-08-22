@@ -23,7 +23,7 @@ const navStyles = {
     container: {
         display: "flex",
         height: '60px',
-        backgroundColor: "rgb(31, 171, 171)",
+        backgroundColor: "#005050",
         flexDirection: "row",
         width: "80%",
         margin: "0 auto",

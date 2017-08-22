@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import Image from './../components/Image';
 
-class IntroContainer extends Component {
+export default class IntroContainer extends Component {
     render() {
         return (
             <div style={introStyles.container}>
                 <div style={introStyles.textContainer}>
                     <h2 style={introStyles.text}>Interstitial Cystitis</h2>
-                    <h2 style={introStyles.text}>Helen's Story</h2>
                 </div>
                 <Image
                     style={introStyles.image}
@@ -17,8 +16,9 @@ class IntroContainer extends Component {
             </div>
         )
     }
-}
+};
 
+// Once we have an image asset to be used on the site, we can begin to style the .image class
 const introStyles = {
     container: {
         display: "flex",
@@ -49,6 +49,4 @@ const introStyles = {
         overflow: "hidden",
         boxShadow: "5px 5px 5px #888888"
     }
-}
-
-export default IntroContainer
+};

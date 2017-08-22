@@ -39,7 +39,7 @@ class FooterContainer extends Component {
 }
 const footerStyles = {
     container: {
-        backgroundColor: "#353941",
+        backgroundColor: "#005050",
         flexDirection: "row",
         width: "80%",
         margin: "0 auto",
