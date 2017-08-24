@@ -35,14 +35,16 @@
     margin-left: 20%;
     background-color: lightgray;
     margin-top: 20px;
+    overflow: hidden;
 }
 
 .link {
-    line-height: 40px;
-    width: 23%;
+    vertical-align: top;
+    display: inline-block;
+    line-height: 38px;
+    width: 20%;
     margin-left: 2%;
-    padding: 10px;
-    font-size: 20px;
+    font-size: 18px;
     text-decoration: none;
 }
 
@@ -109,15 +111,25 @@
     padding: 1%;
 }
 
-.linksBar {
+.footerlinksBar {
+    height: 40px;
+    width: 88%;
+    margin-left: 20%;
+    background-color: lightgray;
+    margin-top: 20px;
+}
+.footerDiv h2{
+    margin: 0 0 5px 0;
+}
+
+/*.linksBar {
     display: block;
     margin: 0 auto;
     text-align: center;
-}
+}*/
 
 .footerLink {
-    display: block;
-    padding: 10px;
+    padding: 5px;
     text-decoration: none;
     color: #8E989E;
 }

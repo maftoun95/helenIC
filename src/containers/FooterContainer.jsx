@@ -10,7 +10,7 @@ export default class FooterContainer extends Component {
                     <Image
                         className={'footerImage'}
                         image={"http://lorempixel.com/200/100"} />
-                    <div className={'linksBar'}>
+                    <div className={'footerLinksBar'}>
                         <div className={'footerDiv'}>
                             <h2>Interstitial Cystitis</h2>
                             <NavLink className={'footerLink'} link={'About Us'} />
