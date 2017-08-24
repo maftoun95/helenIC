@@ -12,9 +12,3 @@ export default class ContentItem extends Component {
         );
     }
 };
-
-const itemStyles = {
-    item: {
-        
-    }
-};

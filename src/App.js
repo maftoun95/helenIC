@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import Content from './components/Content'
+import Content from './components/Content';
+import './components/homepage.css';
 
 // containers
 import IntroContainer from './containers/IntroContainer.jsx';

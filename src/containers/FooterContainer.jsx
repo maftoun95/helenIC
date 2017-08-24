@@ -1,36 +1,37 @@
 import React, { Component } from 'react';
 import NavLink from './../components/NavLink'
 import Image from './../components/Image'
-class FooterContainer extends Component {
+
+export default class FooterContainer extends Component {
     render() {
         return (
             <div>
-                <div style={footerStyles.container}>
+                <div className={'footerContainer'}>
                     <Image
-                        style={footerStyles.image}
+                        className={'footerImage'}
                         image={"http://lorempixel.com/200/100"} />
-                    <div style={footerStyles.linksBar}>
-                        <div style={footerStyles.div}>
+                    <div className={'linksBar'}>
+                        <div className={'footerDiv'}>
                             <h2>Interstitial Cystitis</h2>
-                            <NavLink style={footerStyles.link} link={'About Us'} />
-                            <NavLink style={footerStyles.link} link={'Contact'} />
-                            <NavLink style={footerStyles.link} link={'FAQ'} />
+                            <NavLink className={'footerLink'} link={'About Us'} />
+                            <NavLink className={'footerLink'} link={'Contact'} />
+                            <NavLink className={'footerLink'} link={'FAQ'} />
                         </div>
-                        <div style={footerStyles.div}>
+                        <div className={'footerDiv'}>
                             <h2>Lorem Ipsum</h2>
-                            <NavLink style={footerStyles.link} link={'Lorem Ipsum'} />
-                            <NavLink style={footerStyles.link} link={'Contact'} />
-                            <NavLink style={footerStyles.link} link={'Lorem Ipsum'} />
+                            <NavLink className={'footerLink'} link={'Lorem Ipsum'} />
+                            <NavLink className={'footerLink'} link={'Contact'} />
+                            <NavLink className={'footerLink'} link={'Lorem Ipsum'} />
                         </div>
-                        <div style={footerStyles.div}>
+                        <div className={'footerDiv'}>
                             <h2>Lorem Ipsum</h2>
-                            <NavLink style={footerStyles.link} link={'Lorem Ipsum'} />
-                            <NavLink style={footerStyles.link} link={'Lorem Ipsum'} />
-                            <NavLink style={footerStyles.link} link={'Lorem Ipsum'} />
+                            <NavLink className={'footerLink'} link={'Lorem Ipsum'} />
+                            <NavLink className={'footerLink'} link={'Lorem Ipsum'} />
+                            <NavLink className={'footerLink'} link={'Lorem Ipsum'} />
                         </div>
                     </div>
                 </div>
-                <div style={footerStyles.bottomFooter}>
+                <div className={'bottomFooter'}>
                     <p>Copyright 2017 - Interstitial Cystitis - All Rights Reserved</p>
                 </div>
             </div>
@@ -76,6 +77,4 @@ const footerStyles = {
         paddingRight: "10px",
         textAlign: "center"
     }
-}
-
-export default FooterContainer
+};

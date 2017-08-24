@@ -4,21 +4,19 @@ import Image from './../components/Image';
 export default class IntroContainer extends Component {
     render() {
         return (
-            <div style={introStyles.container}>
-                <div style={introStyles.textContainer}>
-                    <h2 style={introStyles.text}>Interstitial Cystitis</h2>
+            <div className="introWrapper">
+                <div className="textContainer">
+                    <h2 className="text">Interstitial Cystitis</h2>
                 </div>
                 <Image
-                    style={introStyles.image}
                     image={"http://lorempixel.com/800/400"}
+                    className={'introImage'}
                 >
                 </Image>
             </div>
         )
     }
 };
-
-// Once we have an image asset to be used on the site, we can begin to style the .image class
 const introStyles = {
     container: {
         display: "flex",

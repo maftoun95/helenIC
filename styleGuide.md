@@ -4,8 +4,9 @@ This document is a reference for our developers regarding the styles and practic
 To suggest an ammendment please open an issue on [the projects GitHub page](https://github.com/maftoun95/helenIC), make the appropriate changes, and submit a pull request.
 
 ### Styling
-We are styling this site using CSS modules. Each route has its own CSS file where all the classes used in building our components are defined. Each component will import the appropriate CSS file at the top. 
-Ex: `import './homepage.css';`
+We are styling this site using CSS modules. Each route has its own CSS file where all the classes used in building our components are defined. Component files will not need to import the style sheet as it will be imported in the parent route component. 
+
+Example import at the top of a route component: `import './homepage.css';`
 [create-react-app docs regarding css modules](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#adding-a-stylesheet)
 
 ### The Container Component pattern

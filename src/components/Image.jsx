@@ -4,6 +4,7 @@ const Image = props => (
     <div>
         <img
             style={props.style}
+            className={props.className}
             src={props.image}
             alt=""
         />
@@ -12,4 +13,4 @@ const Image = props => (
 
 
 
-export default Image
+export default Image;
