@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import NavLink from './../components/NavLink'
-import Image from './../components/Image'
 
 export default class FooterContainer extends Component {
     render() {

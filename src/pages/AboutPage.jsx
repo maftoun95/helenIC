@@ -1,9 +1,13 @@
 import React from 'react';
 
-export default class AboutPage extends React.Component{
-  render(){
-    return(
-      <div>About Page Goes Here</div>
+import AboutContainer from './../containers/AboutContainer'
+
+export default class AboutPage extends React.Component {
+  render() {
+    return (
+      <div>
+        <AboutContainer />
+      </div>
     )
   }
 }

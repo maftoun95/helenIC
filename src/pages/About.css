@@ -1,0 +1,24 @@
+.aboutWrapper{
+    background-color: #005050;
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.card{
+    display: inline-block;
+    text-align: center;  
+    padding-bottom: 4%;
+}
+
+.small{
+    width: 45%;
+    padding-right: 5%;
+}
+.large{
+    width: 100%;
+}
+.videpPlayer{
+    width: 300px;
+    height: 200px;
+}
