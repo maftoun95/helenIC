@@ -13,21 +13,21 @@ export default class FooterContainer extends Component {
                     <div className={'footerLinksBar'}>
                         <div className={'footerDiv'}>
                             <h2>Interstitial Cystitis</h2>
-                            <NavLink className={'footerLink'} link={'About Us'} />
-                            <NavLink className={'footerLink'} link={'Contact'} />
-                            <NavLink className={'footerLink'} link={'FAQ'} />
+                            <NavLink className={'footerLink'} linkTo='About' link={'About Us'} />
+                            <NavLink className={'footerLink'} linkTo='Contact' link={'Contact'} />
+                            <NavLink className={'footerLink'} linkTo='/' link={'FAQ'} />
                         </div>
                         <div className={'footerDiv'}>
                             <h2>Lorem Ipsum</h2>
-                            <NavLink className={'footerLink'} link={'Lorem Ipsum'} />
-                            <NavLink className={'footerLink'} link={'Contact'} />
-                            <NavLink className={'footerLink'} link={'Lorem Ipsum'} />
+                            <NavLink className={'footerLink'} linkTo='/' link={'Lorem Ipsum'} />
+                            <NavLink className={'footerLink'} linkTo='/' link={'Contact'} />
+                            <NavLink className={'footerLink'} linkTo='/' link={'Lorem Ipsum'} />
                         </div>
                         <div className={'footerDiv'}>
                             <h2>Lorem Ipsum</h2>
-                            <NavLink className={'footerLink'} link={'Lorem Ipsum'} />
-                            <NavLink className={'footerLink'} link={'Lorem Ipsum'} />
-                            <NavLink className={'footerLink'} link={'Lorem Ipsum'} />
+                            <NavLink className={'footerLink'} linkTo='/' link={'Lorem Ipsum'} />
+                            <NavLink className={'footerLink'} linkTo='/' link={'Lorem Ipsum'} />
+                            <NavLink className={'footerLink'} linkTo='/' link={'Lorem Ipsum'} />
                         </div>
                     </div>
                 </div>
@@ -38,43 +38,3 @@ export default class FooterContainer extends Component {
         )
     }
 }
-const footerStyles = {
-    container: {
-        backgroundColor: "#005050",
-        flexDirection: "row",
-        width: "80%",
-        margin: "0 auto",
-        padding: "0 10px 0 10px"
-    },
-    image: {
-        display: 'block',
-        margin: '0 auto',
-        padding: "1%"
-    },
-    linksBar: {
-        display: 'block',
-        margin: '0 auto',
-        textAlign: 'center'
-    },
-    link: {
-        display: 'block',
-        padding: '10px',
-        textDecoration: 'none',
-        color: '#8E989E',
-    },
-    div: {
-        display: 'inline-block',
-        margin: "2%",
-        paddingBottom: "2%"
-    },
-    bottomFooter: {
-        backgroundColor: "#FFFFFF",
-        color: 'gray',
-        fontSize: "12px",
-        width: "100%",
-        margin: 0,
-        paddingLeft: "10px",
-        paddingRight: "10px",
-        textAlign: "center"
-    }
-};

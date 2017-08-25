@@ -1,7 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const NavLink = (props) => (
-    <a style={props.style} className={props.className} href=''>{props.link}</a>
-);
+const NavLink = (props) => {
+    console.log(props);
+    return (<Link to={props.linkTo} style={props.style} className={props.className}>{props.link}</Link>)
+};
 
 export default NavLink;
