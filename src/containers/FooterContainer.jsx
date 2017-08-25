@@ -5,11 +5,8 @@ import Image from './../components/Image'
 export default class FooterContainer extends Component {
     render() {
         return (
-            <div>
+            <div className='wholeShebang'>
                 <div className={'footerContainer'}>
-                    <Image
-                        className={'footerImage'}
-                        image={"http://lorempixel.com/200/100"} />
                     <div className={'footerLinksBar'}>
                         <div className={'footerDiv'}>
                             <h2>Interstitial Cystitis</h2>
