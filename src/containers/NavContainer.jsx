@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Image from './../components/Image.jsx';
 import NavLink from './../components/NavLink.jsx';
-// import SignUp from './../components/SignUp.jsx';
 
 export default class NavContainer extends Component {
     render() {

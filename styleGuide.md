@@ -10,6 +10,6 @@ Example import at the top of a route component: `import './homepage.css';`
 [create-react-app docs regarding css modules](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#adding-a-stylesheet)
 
 ### The Container Component pattern
-We are using The Container Component pattern. What this means functionally is that whenever there is a component that needs to fetch data, it will have a coresponding container component that will handle the actual data fetching and pass the results to the main component.
-We are building containers only where we need to ping a server.
+We are using The Container Component pattern. What this means functionally is that whenever there is a component that needs to fetch data, it will have a coresponding container component that will handle the actual data fetching and use the results to render dumb components.
+Besides the data fetching use case, we are using containers to render smaller sub components.
 [A simple primer on The Container Component pattern](https://medium.com/@learnreact/container-components-c0e67432e005)

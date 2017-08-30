@@ -3,7 +3,7 @@ import './../pages/About.css'
 import Card from './../components/Card';
 import VideoPlayer from './../components/VideoPlayer';
 
-class AboutContainer extends Component {
+export default class AboutContainer extends Component {
     render() {
         return (
             <div className="aboutWrapper">
@@ -31,5 +31,3 @@ class AboutContainer extends Component {
         )
     }
 }
-
-export default AboutContainer;

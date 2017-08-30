@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import SingleInput from './../components/SingleInput'
 import TextArea from './../components/TextArea'
 import Information from './../components/Information';
-class ContactForm extends Component {
+
+export default class ContactForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -111,4 +112,3 @@ class ContactForm extends Component {
         )
     }
 }
-export default ContactForm;
