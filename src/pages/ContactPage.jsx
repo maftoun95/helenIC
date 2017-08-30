@@ -1,9 +1,12 @@
 import React from 'react';
-
-export default class ContactPage extends React.Component{
-  render(){
-    return(
-      <div>Contact Page Goes Here:</div>
+import ContactForm from './../containers/ContactFormContainer'
+import './Contact.css'
+export default class ContactPage extends React.Component {
+  render() {
+    return (
+      <div>
+        <ContactForm />
+      </div>
     )
   }
 }

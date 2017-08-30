@@ -1,0 +1,29 @@
+.container{
+    text-align: center;
+    padding: 2%;
+    background-color: #005050;
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+}
+.form-group{
+    width: 100%;
+
+}
+.form-label{
+    padding-right: 2%;
+}
+.form-input{
+    border-radius: 10px;
+    border: 0.5px solid gray;
+}
+.contact-info{
+    margin: 0 auto;
+    width: 80%;
+    padding-bottom: 3%;
+}
+.contact-button{
+    width: 20%;
+    background-color: coral;
+    border-radius: 30px;
+}

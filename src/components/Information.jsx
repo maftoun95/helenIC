@@ -2,7 +2,7 @@ import React from 'react';
 
 const Information = props => {
     return (
-        <div>
+        <div className={props.className}>
             {props.information}
         </div>
     )
