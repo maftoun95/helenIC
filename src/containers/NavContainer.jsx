@@ -6,14 +6,13 @@ export default class NavContainer extends Component {
     render() {
         return (
             <div className={'navWrapper'}>
-                <Image className={'navImage'} image={"http://lorempixel.com/400/200"}/>
+                <Image className={'navImage'} image={"../../pictures/master_logo.jpg"}/>
                 <div className={'linksBar'}>
                     <NavLink className={'link'} linkTo={'/'} link={'Home'} />
-                    <NavLink className={'link'} linkTo={'About'} link={'About Us'} />
+                    <NavLink className={'link'} linkTo={'About'} link={'About'} />
                     <NavLink className={'link'} linkTo={'Contact'} link={'Contact'} />
-                    <NavLink className={'link'} linkTo={'Products'}link={'Products'} />
+                    <NavLink className={'link'} linkTo={'Log In'}link={'Login'} />
                 </div>
-                <NavLink className={'signUp'} linkTo={'Signup'} link={'Sign Up / In'}/>
             </div>
         )
     }

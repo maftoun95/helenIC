@@ -4,7 +4,7 @@ import Card from './../components/Card.jsx';
 import VideoPlayer from './../components/VideoPlayer.jsx';
 
 export default class AboutPage extends React.Component {
-  render() {
+    render() {
     return (
         <div className="aboutWrapper">
             <Card

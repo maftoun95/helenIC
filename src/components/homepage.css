@@ -1,21 +1,26 @@
+/* Cute shit to play with later: */
+    /* background: linear-gradient(135deg, #7c1599 0%,#921099 48%,#7e4ae8 100%); */
+
+
 /* Nav Bar */
 .navWrapper {
     display: flex;
     height: 60px;
-    background-color: #005050;
-    width: 80%;
+    background-color: #5DBCCE;
+    width: 100%;
     margin: 0 auto;
     padding: 10px;
 }
 
 .navImage {
-        max-width: 100%;
-        height: 60px;
-        margin-right: 40px;
-        display: inline-block;
-        overflow: hidden;
-        box-shadow: 5px 5px 5px #888;
-    }
+    max-width: 100%;
+    height: 60px;
+    margin-right: 5%;
+    margin-left: 10%;
+    display: inline-block;
+    overflow: hidden;
+    box-shadow: 3px 3px 3px #888;
+}
 
 .signUp {
     width: 130px;
@@ -53,7 +58,7 @@
 /* Intro */
 .introWrapper {
     display: flex;
-    background: #e0ffff;
+    background: #EDEDED;
     width: 80%;
     margin: 0 auto;
     padding: 10px;
@@ -69,7 +74,7 @@
 .text {
     font-size: 32px;
     font-family: cursive;
-    box-shadow: 5px 5px 5px #888888;
+    box-shadow: 3px 3px 3px #4B3A3A;
     overflow: hidden;
     padding: 0 10px;
 }
@@ -79,7 +84,8 @@
     height: auto;
     display: inline-block;
     overflow: hidden;
-    box-shadow: 5px 5px 5px #888888
+    box-shadow: 3px 3px 3px #4B3A3A;
+    border-radius: 18px;
 }
 
 /* Content / Content Item  */
@@ -87,7 +93,7 @@
     display: flex;
     width: 80%;
     margin: 0 auto;
-    background: #e0ffff;
+    background: #EDEDED;
     padding: 10px;
 }
 
@@ -97,15 +103,19 @@
     margin: 15px;
 }
 
+.contentItem img {
+    border-radius: 100px;
+}
+
 /* Footer */
 
 .wholeShebang {
-    background-color: #005050;
+    background-color: #5DBCCE;
     width: 100%;
 }
 
 .footerContainer {
-    background-color: #005050;
+    background-color: #5DBCCE;
     flex-direction: row;
     width: 80%;
     margin: 0 auto;
@@ -143,7 +153,7 @@
     display: block;
     padding: 5px;
     text-decoration: none;
-    color: #8E989E;
+    color: #563EA3;
 }
 
 .footerDiv {
@@ -154,7 +164,7 @@
 
 .bottomFooter {
     /* background-color: #FFFFFF; */
-    color: gray;
+    color: #563EA3;
     font-size: 12px;
     width: 100%;
     margin: 0;
