@@ -14,3 +14,81 @@
 .rightSidebar{
     background: green;
 }
+  
+.accordion-container {
+    width: 60%;
+    min-width: 500px;
+    margin: 5vh auto;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: -2px 1px 2px 2px #212121;
+    cursor: pointer;
+}
+
+.answer, .summary {
+    display: inline-block;
+}
+
+
+.summary {
+    font-family: 'Josefin Slab', serif;
+    text-transform: uppercase;
+    line-height: 25px;
+    padding: 15px;
+}
+
+.folding-panel {
+    display: block;
+    transition: all 0.2s ease-in;
+    line-height: 40px;
+    background-color: #FBFBFB;
+}
+
+.active .summary {
+    border-color: transparent;
+    transition: border-color 0.2s ease-out;
+    cursor: default !important;
+}
+
+.inactive .folding-panel,
+.inactive .accordion-formarea  {
+    transform-origin: 50% 0%;
+    transform: perspective(250px) rotateX(-90deg);
+    transition: all 0.4s ease-in-out;
+    height: 0;
+}
+.active .folding-panel, .active .accordion-formarea {
+    transform: perspective(350px) rotateX(0deg);
+    transition: all 0.4s ease-in-out;
+    text-indent: 40px;
+    border-top: 2px solid #3a3042;
+    padding:5% 10%;
+}
+.accordion-textarea{
+  border-radius: 5px;
+}
+
+.accordion-button{
+    float: right;
+    margin-right: 30px;
+    margin-top: 10px;
+    border-radius: 50%;
+    color: white;
+    background-color:#C6C6C6;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+}
+.accordion-submitComment{
+  width: 30%;
+  margin-left: 50%;
+  background-color: #C6C6C6;
+  border-radius: 30px;
+}
+.accordion-showmore{
+    text-decoration: underline;
+    color: #C6C6C6;
+    text-align: center;
+    padding-left: 50%; 
+    cursor: pointer;
+}

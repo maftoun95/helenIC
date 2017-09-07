@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
-
-export default class SidebarLeft extends Component {
-    render(){
-        return <h1>Center Console</h1>
+import Accordion from './Accordion';
+class CenterDashboard extends Component {
+    render() {
+        return (
+            <div>
+                <Accordion />
+            </div>
+        )
     }
 }
+
+export default CenterDashboard;
