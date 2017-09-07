@@ -12,7 +12,6 @@ class Accordion extends Component {
         this.showMore = this.showMore.bind(this);
     }
     showMore(display) {
-
         this.setState({
             display: this.state.display + 5
         })
