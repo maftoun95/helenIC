@@ -89,6 +89,7 @@ export default class ContactForm extends Component {
                     />
 
                     <TextArea
+                        className='contact-form-textarea'
                         title={'Comments'}
                         rows={5}
                         resize={false}
