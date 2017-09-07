@@ -87,12 +87,14 @@
 
 .accordion-button{
     float: right;
+    min-width: 25px;
+    min-height: 25px;
     margin-right: 30px;
     margin-top: 10px;
     border-radius: 50%;
     color: white;
     background-color:#C6C6C6;
-    font-size: 14px;
+    font-size: 18px;
     border: none;
     cursor: pointer;
 }
@@ -108,4 +110,8 @@
     text-align: center;
     padding-left: 50%;
     cursor: pointer;
+}
+
+.centerdashboard-bottom{
+  text-align: center;
 }

@@ -10,12 +10,16 @@ class AccordionItem extends Component {
         this.toggle = this.toggle.bind(this);
         this.handleCommentsChange = this.handleCommentsChange.bind(this);
         this.handleFormSubmit = this.handleFormSubmit.bind(this);
+        this.childClick = this.childClick.bind(this);
     }
     toggle() {
         this.setState({
             active: !this.state.active,
             class: "active"
         });
+    }
+    childClick(e) {
+        e.stopPropagation();
     }
     handleCommentsChange(e) {
         this.setState({ content: e.target.value })
@@ -36,6 +40,7 @@ class AccordionItem extends Component {
     }
     render() {
         const activeClass = this.state.active ? "active" : "inactive";
+        const activeButton = this.state.active ? "-" : "+";
         const post = this.props.details;
         const textareaClass = activeClass + " accordion-formarea"
         return (
@@ -43,28 +48,33 @@ class AccordionItem extends Component {
                 className={activeClass}
                 onClick={this.toggle}
             >
-                <button className="accordion-button">+</button>
-                <span className="summary">{post.summary}</span>
-                <span className="folding-panel answer">{post.answer}</span>
-                <form
-                    onSubmit={this.handleFormSubmit}
-                    className={textareaClass}
+                <button className="accordion-button">{activeButton}</button>
+                <div
+                    onClick={this.childClick}
                 >
-                    <TextArea
-                        className="accordion-textarea"
-                        rows={5}
-                        cols={100}
-                        resize={false}
-                        content={this.state.content}
-                        name={'comments'}
-                        controlFunc={this.handleCommentsChange}
-                        placeholder={'comments'}
-                    />
-                    <input
-                        className="accordion-submitComment"
-                        type="submit"
-                        value="submit" />
-                </form>
+                    <span className="summary">{post.summary}</span>
+                    <span className="folding-panel answer">{post.answer}</span>
+                    <form
+                        onSubmit={this.handleFormSubmit}
+                        className={textareaClass}
+                    >
+                        <TextArea
+                            className="accordion-textarea"
+                            rows={5}
+                            cols={100}
+                            resize={false}
+                            content={this.state.content}
+                            name={'comments'}
+                            controlFunc={this.handleCommentsChange}
+                            placeholder={'comments'}
+                        />
+                        <input
+                            className="accordion-submitComment"
+                            type="submit"
+                            value="submit" />
+                    </form>
+                </div>
+
             </div>
         )
     }

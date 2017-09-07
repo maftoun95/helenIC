@@ -64,6 +64,7 @@ export default class ContactForm extends Component {
                 />
                 <form onSubmit={this.handleFormSubmit}>
                     <SingleInput
+                        className="form-input"
                         inputType={'text'}
                         title={'First Name'}
                         name={'firstName'}
@@ -72,6 +73,7 @@ export default class ContactForm extends Component {
                         placeholder={'First Name'}
                     />
                     <SingleInput
+                        className="form-input"
                         inputType={'text'}
                         title={'Last Name'}
                         name={'lastName'}
@@ -80,6 +82,7 @@ export default class ContactForm extends Component {
                         placeholder={'Last Name'}
                     />
                     <SingleInput
+                        className="form-input"
                         inputType={'email'}
                         title={'Email'}
                         name={'email'}
