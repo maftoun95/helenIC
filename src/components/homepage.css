@@ -45,7 +45,7 @@
     overflow: hidden;
 }
 
-.linksBar 
+.linksBar
 
 .link {
     vertical-align: top;
@@ -79,7 +79,7 @@
 
 .text {
     font-size: 32px;
-    font-family: cursive;
+    /*font-family: cursive;*/
     box-shadow: 3px 3px 3px #4B3A3A;
     overflow: hidden;
     padding: 0 10px;
@@ -140,7 +140,7 @@
     display: flex;
     justify-content: space-around;
     width: 88%;
-    margin-left: 4%;  
+    margin-left: 4%;
     background-color: lightgray;
     margin-top: 20px;
     border-radius: 7px;
@@ -177,4 +177,4 @@
     padding-left: 10px;
     padding-right: 10px;
     text-align: center;
-} 
+}
