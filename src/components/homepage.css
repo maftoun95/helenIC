@@ -35,10 +35,12 @@
 }
 
 .linksBar {
+    display: flex;
+    justify-content: space-between;
     height: 40px;
-    width: 40%;
-    margin-left: 20%;
-    background-color: lightgray;
+    width: 35%;
+    margin-left: 35%;
+    /* background-color: lightgray; */
     margin-top: 20px;
     overflow: hidden;
 }
@@ -53,6 +55,10 @@
     margin-left: 2%;
     font-size: 18px;
     text-decoration: none;
+}
+
+.sideline {
+    border-right: 3px solid #563EA3;
 }
 
 /* Intro */

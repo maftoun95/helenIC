@@ -7,10 +7,12 @@ export default class NavContainer extends Component {
         return (
             <div className={'navWrapper'}>
                 <Image className={'navImage'} image={"../../pictures/master_logo.jpg"}/>
+                    <NavLink linkTo={'UserDashboard'}link={'HACK THE DASHBOARDDDDDD'} />
+                
                 <div className={'linksBar'}>
-                    <NavLink className={'link'} linkTo={'/'} link={'Home'} />
-                    <NavLink className={'link'} linkTo={'About'} link={'About'} />
-                    <NavLink className={'link'} linkTo={'Contact'} link={'Contact'} />
+                    <NavLink className={'link sideline'} linkTo={'/'} link={'Home'} />
+                    <NavLink className={'link sideline'} linkTo={'About'} link={'About'} />
+                    <NavLink className={'link sideline'} linkTo={'Contact'} link={'Contact'} />
                     <NavLink className={'link'} linkTo={'Log In'}link={'Login'} />
                 </div>
             </div>

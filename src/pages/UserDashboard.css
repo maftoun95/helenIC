@@ -1,0 +1,16 @@
+.userDashboard{
+    display: inline;
+    background: lime;
+}
+
+.leftSidebar{
+    background: red;
+}
+
+.leftSidebar{
+    background: gold;
+}
+
+.rightSidebar{
+    background: green;
+}

@@ -6,6 +6,7 @@ import ContactPage from './pages/ContactPage.jsx';
 import HomePage from './pages/HomePage.jsx';
 import SignUpPage from './pages/SignUpPage.jsx';
 import ProductsPage from './pages/ProductsPage.jsx';
+import UserDashboard from './pages/UserDashboard.jsx';
 import NavContainer from './containers/NavContainer.jsx';
 import FooterContainer from './containers/FooterContainer.jsx';
 
@@ -20,6 +21,8 @@ class App extends Component {
           <Route path='/Contact' component={ContactPage} />
           <Route path='/Signup' component={SignUpPage} />
           <Route path='/Products' component={ProductsPage} />
+          <Route path='/UserDashboard' component={UserDashboard} />
+          
           <FooterContainer />
         </div>
       </BrowserRouter>
