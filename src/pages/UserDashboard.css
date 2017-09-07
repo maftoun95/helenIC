@@ -1,20 +1,38 @@
+:root{
+  --userDashHeight: 80%;
+}
 .userDashboard{
-    display: inline;
-    background: lime;
+    display: block;
+    background: #EDEDED;
 }
 
 .leftSidebar{
     background: red;
+    background-color: #7a5fd0;
+    display: inline-block;
+    width: 250px;
+    vertical-align: top;
 }
-
-.leftSidebar{
-    background: gold;
+.leftSidebar > ul{
+  list-style: none;
+  margin-left: -5%;
+}
+.leftSidebar > ul > li{
+  border-bottom: 1px solid #9883DA;
+  width: 80%;
 }
 
 .rightSidebar{
+    vertical-align: top;
     background: green;
+    display: inline-block;
+    width: 20%;
 }
-  
+
+.centerConsole{
+  vertical-align: top;
+  width: 600px;
+}
 .accordion-container {
     width: 60%;
     min-width: 500px;
@@ -28,7 +46,6 @@
 .answer, .summary {
     display: inline-block;
 }
-
 
 .summary {
     font-family: 'Josefin Slab', serif;
@@ -91,7 +108,7 @@
     text-decoration: underline;
     color: #C6C6C6;
     text-align: center;
-    padding-left: 50%; 
+    padding-left: 50%;
     cursor: pointer;
 }
 
