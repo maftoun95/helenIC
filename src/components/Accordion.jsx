@@ -17,11 +17,7 @@ class Accordion extends Component {
         })
     }
     renderPosts(key) {
-        return (
-            <div>
-                <AccordionItem key={key} index={key} details={this.state.posts[key]} />
-            </div>
-        )
+        return (<AccordionItem key={key} index={key} details={this.state.posts[key]} />)
     }
     render() {
         return (

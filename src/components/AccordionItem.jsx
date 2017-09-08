@@ -44,15 +44,11 @@ class AccordionItem extends Component {
         const post = this.props.details;
         const textareaClass = activeClass + " accordion-formarea"
         return (
-            <div
-                className={activeClass}
-                onClick={this.toggle}
-            >
-                <button className="accordion-button">{activeButton}</button>
-                <div
-                    onClick={this.childClick}
-                >
+            <div className={activeClass}>
+                <div className='accordionItemToggler' onClick={this.toggle}>
+                    <button className="accordion-button">{activeButton}</button>
                     <span className="summary">{post.summary}</span>
+                </div>
                     <span className="folding-panel answer">{post.answer}</span>
                     <form
                         onSubmit={this.handleFormSubmit}
@@ -73,8 +69,6 @@ class AccordionItem extends Component {
                             type="submit"
                             value="submit" />
                     </form>
-                </div>
-
             </div>
         )
     }

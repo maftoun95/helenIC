@@ -82,7 +82,8 @@
 .active .summary {
     border-color: transparent;
     transition: border-color 0.2s ease-out;
-    cursor: default !important;
+    /*cursor: default !important;*/
+    cursor: pointer;
 }
 
 .inactive .folding-panel,
@@ -98,12 +99,15 @@
     text-indent: 40px;
     border-top: 2px solid #3a3042;
     padding:5% 10%;
+    cursor: default;
+}
+.accordionItemToggler{
+    cursor: pointer;
 }
 .accordion-textarea{
     border-radius: 5px;
     width: 80%;
 }
-
 .accordion-button{
     float: right;
     min-width: 25px;
