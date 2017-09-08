@@ -1,37 +1,55 @@
 :root{
-  --userDashHeight: 80%;
+    --userDashHeight: 80%;
 }
 .userDashboard{
-    display: block;
-    background: #EDEDED;
+     display: flex; 
+    background: #EDEDED; 
+    z-index: -1;
 }
 
+/* Left Sidebar */
 .leftSidebar{
-    background: red;
     background-color: #7a5fd0;
     display: inline-block;
     width: 250px;
     vertical-align: top;
+    font-size: 18px;
+    color: white;
 }
 .leftSidebar > ul{
-  list-style: none;
-  margin-left: -5%;
+    list-style: none;
+    margin-left: -5%;
 }
 .leftSidebar > ul > li{
-  border-bottom: 1px solid #9883DA;
-  width: 80%;
+    border-bottom: 2px solid #9883DA;
+    width: 80%;
+    padding: 11px 0;
 }
 
+/* Right Sidebar */
 .rightSidebar{
     vertical-align: top;
-    background: green;
+    background: #FFF;
     display: inline-block;
-    width: 20%;
+    width: 333px;
+    border-left: 2px solid #AAA;
 }
 
+.wordsPost {
+    margin: 15px;
+    padding-bottom: 25px;
+    padding-top: 13px;
+    border-bottom: 1px solid #F0F0F0;
+}
+
+.wordsPost > h3 {
+    color: #8168D2;
+}
+
+/* Center Console */
 .centerConsole{
-  vertical-align: top;
-  width: 600px;
+    vertical-align: top;
+    width: 600px;
 }
 .accordion-container {
     width: 60%;
@@ -82,7 +100,7 @@
     padding:5% 10%;
 }
 .accordion-textarea{
-  border-radius: 5px;
+    border-radius: 5px;
 }
 
 .accordion-button{
@@ -99,10 +117,10 @@
     cursor: pointer;
 }
 .accordion-submitComment{
-  width: 30%;
-  margin-left: 50%;
-  background-color: #C6C6C6;
-  border-radius: 30px;
+    width: 30%;
+    margin-left: 50%;
+    background-color: #C6C6C6;
+    border-radius: 30px;
 }
 .accordion-showmore{
     text-decoration: underline;
@@ -113,5 +131,5 @@
 }
 
 .centerdashboard-bottom{
-  text-align: center;
+    text-align: center;
 }
