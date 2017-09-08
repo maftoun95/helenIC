@@ -23,42 +23,34 @@
     margin-left: 10%;
     display: inline-block;
     overflow: hidden;
-    box-shadow: 3px 3px 3px #888;
 }
 
-.signUp {
-    width: 130px;
-    height: 30px;
-    margin-top: -10px;
-    margin-left: 10%;
-    padding-top: 10px;
-    border: 2px solid black;
-    border-radius: 3px;
-    background-color: #fefaff;
-    text-decoration: none;
-}
 
 .linksBar {
     display: flex;
     justify-content: space-between;
+    position: absolute;
+    right: 50px;
     height: 40px;
-    width: 35%;
-    margin-left: 35%;
     /* background-color: lightgray; */
     margin-top: 20px;
     overflow: hidden;
 }
 
-.linksBar
-
-.link {
+.linksBar .link {
     vertical-align: top;
     display: inline-block;
     line-height: 38px;
-    width: 20%;
-    margin-left: 2%;
+    width: 80px;
+    text-align: center;
+    margin-left: 10px;
     font-size: 18px;
+    color: #7a5fd0;
     text-decoration: none;
+}
+
+.linksBar .link:hover{
+    color: #251066;
 }
 
 .sideline {
@@ -119,66 +111,25 @@
 
 /* Footer */
 
-.wholeShebang {
-    background-color: #5DBCCE;
-    width: 100%;
-}
 
-.footerContainer {
-    background-color: #5DBCCE;
-    flex-direction: row;
-    width: 80%;
-    margin: 0 auto;
-    padding-top: 1px;
-
-}
-
-.footerImage {
-    display: block;
-    margin: 0 auto;
-    padding: 1%;
-}
-
-.footerLinksBar {
-    /* height: 40px;  */
-    display: flex;
-    justify-content: space-around;
-    width: 88%;
-    margin-left: 4%;
-    background-color: lightgray;
-    margin-top: 20px;
-    border-radius: 7px;
-}
-.footerDiv h2{
-    margin: 0 0 5px 0;
-}
-
-/*.linksBar {
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-}*/
-
-.footerLink {
-    display: block;
-    padding: 5px;
-    text-decoration: none;
-    color: #563EA3;
-}
-
-.footerDiv {
-    display: inline-block;
-    margin: 2%;
-    padding-bottom: 2%;
-}
-
-.bottomFooter {
-    /* background-color: #FFFFFF; */
-    color: #563EA3;
+.footer {
+    position: relative;
+    z-index: 100;
+    color: #D6D6D6;
+    background-color: #FFFFFF;
     font-size: 12px;
+    height: 50px;
     width: 100%;
-    margin: 0;
-    padding-left: 10px;
+    margin: 0px;
+    box-shadow: 0px -1px 3px 0px #AAA;
+}
+.footer > p {
+    display: inline;
+    margin: 0px;
+    margin-left: 20px;
+    line-height: 50px;
+    padding-left: 25px;
     padding-right: 10px;
-    text-align: center;
+    height: 25px;
+    background: transparent;
 }
