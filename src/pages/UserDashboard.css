@@ -2,8 +2,8 @@
     --userDashHeight: 80%;
 }
 .userDashboard{
-     display: flex; 
-    background: #EDEDED; 
+     display: flex;
+    background: #EDEDED;
     z-index: -1;
 }
 
@@ -11,7 +11,7 @@
 .leftSidebar{
     background-color: #7a5fd0;
     display: inline-block;
-    width: 250px;
+    width: 20%;
     vertical-align: top;
     font-size: 18px;
     color: white;
@@ -31,8 +31,8 @@
     vertical-align: top;
     background: #FFF;
     display: inline-block;
-    width: 333px;
     border-left: 2px solid #AAA;
+    width: 30%;
 }
 
 .wordsPost {
@@ -49,7 +49,7 @@
 /* Center Console */
 .centerConsole{
     vertical-align: top;
-    width: 600px;
+    width: 50%;
 }
 .accordion-container {
     width: 60%;
@@ -101,6 +101,7 @@
 }
 .accordion-textarea{
     border-radius: 5px;
+    width: 80%;
 }
 
 .accordion-button{
