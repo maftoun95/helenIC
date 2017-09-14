@@ -1,8 +1,11 @@
 :root{
     --userDashHeight: 80%;
 }
+.body{
+    overflow-x: hidden;
+}
 .userDashboard{
-     display: flex;
+    display: flex;
     background: #EDEDED;
     z-index: -1;
 }
@@ -52,12 +55,10 @@
     width: 50%;
 }
 .accordion-container {
-    width: 60%;
-    min-width: 500px;
+    width: 80%;
     margin: 5vh auto;
-    border-radius: 5px;
     background-color: #fff;
-    box-shadow: -2px 1px 2px 2px #212121;
+    box-shadow: 0px 0px 0px 1px #212121;
     cursor: pointer;
 }
 
@@ -130,11 +131,46 @@
 .accordion-showmore{
     text-decoration: underline;
     color: #C6C6C6;
+    display: block;
     text-align: center;
-    padding-left: 50%;
     cursor: pointer;
 }
 
 .centerdashboard-bottom{
     text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+
+    html, body{
+        overflow-x: hidden;
+        max-width: 100%;
+    }
+    .userDashboard{
+        display: block;
+    }
+    .leftSidebar{
+        display: block;
+        width: 98%;
+        margin: 0 auto;
+    }
+    .centerConsole{
+        display: block;
+        width: 98%;
+        margin: 0 auto;
+    }
+    .rightSidebar{
+        display: block;
+        width: 98%;
+        margin: 0 auto;
+        border: 2px solid #AAA;
+    }
+    .accordion-container{
+        max-width: 70%;
+    }
+    .leftSidebar > ul > li{
+        border-bottom: 2px solid #9883DA;
+        width: 94%;
+        padding: 11px 0;
+    }
 }
