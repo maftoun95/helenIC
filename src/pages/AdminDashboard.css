@@ -1,0 +1,184 @@
+.body{
+    overflow-x: hidden;
+}
+.adminDashboard{
+    display: flex;
+    background: #EDEDED;
+    z-index: -1;
+}
+
+/* Left Sidebar */
+.adminSidebar{
+    background-color: #7a5fd0;
+    display: inline-block;
+    width: 20%;
+    vertical-align: top;
+    font-size: 18px;
+    color: white;
+}
+.adminSidebar > ul{
+    list-style: none;
+    margin-left: -5%;
+}
+.adminSidebar > ul > li{
+    border-bottom: 2px solid #9883DA;
+    width: 80%;
+    padding: 11px 0;
+}
+
+/* Right Sidebar */
+.rightSidebar{
+    vertical-align: top;
+    background: #FFF;
+    display: inline-block;
+    border-left: 2px solid #AAA;
+    width: 30%;
+}
+
+.wordsPost {
+    margin: 15px;
+    padding-bottom: 25px;
+    padding-top: 13px;
+    border-bottom: 1px solid #F0F0F0;
+}
+
+.wordsPost > h3 {
+    color: #8168D2;
+}
+
+/* Center Console */
+.centerConsole{
+    vertical-align: top;
+    width: 80%;
+}
+
+
+.centerdashboard-bottom{
+    text-align: center;
+}
+
+.userCard {
+    background: white;
+    /* border: 1px solid red; */
+    width: 44%;
+    padding: 13px;
+    float: left;
+    margin: 1%;
+    box-shadow: 0px 1px 3px 0px #AAA;
+}
+.userCard img {
+    border-radius: 75px;
+    display: inline;
+}
+
+.userCard h3 {
+    /* border: 1px solid yellow; */
+    margin: 13px;
+}
+
+.userCard h4 {
+    margin: 13px;
+}
+.userCard h5 {
+    margin: 13px;
+}
+
+
+.logins {
+    display: flex;
+    justify-content: space-around;
+    margin: 13px auto;
+}
+
+.loginDate {
+    font-size: 18pt;
+    display: block;
+    text-align: center;
+}
+
+loginText {
+    font-size: 14pt;
+    display: block;
+    text-align: center;
+}
+
+.dates {
+    display: inline-block;
+}
+
+.idText {
+    display: inline;
+    float: right;
+    margin-right: 20%;
+    margin-top: 1%;
+    /* border: 1px solid green; */
+    
+}
+
+button {
+    background-color: #61BCCD;
+    color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #61BCCD;
+    font-size: 15px;
+    padding: 10px 20px;
+    margin: 10px auto;
+}
+
+.buttonWrapper {
+    text-align:center;
+}
+
+/* .participants {
+    display: flex;
+    justify-content: space-around;
+} */
+
+
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+[class*="col-"] {
+    float: left;
+    padding: 5px 20px 2px 15px;
+}
+
+@media screen and (max-width: 768px) {
+
+    html, body{
+        overflow-x: hidden;
+        max-width: 100%;
+    }
+    .adminDashboard{
+        display: block;
+    }
+    .adminSidebar{
+        display: block;
+        width: 98%;
+        margin: 0 auto;
+    }
+    .centerConsole{
+        display: block;
+        width: 98%;
+        margin: 0 auto;
+    }
+    .accordion-container{
+        max-width: 70%;
+    }
+    .adminSidebar > ul > li{
+        border-bottom: 2px solid #9883DA;
+        width: 94%;
+        padding: 11px 0;
+    }
+}

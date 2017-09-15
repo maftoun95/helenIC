@@ -1,10 +1,12 @@
-:root{
-    --userDashHeight: 80%;
-}
 .body{
     overflow-x: hidden;
 }
 .userDashboard{
+    display: flex;
+    background: #EDEDED;
+    z-index: -1;
+}
+.adminDashboard{
     display: flex;
     background: #EDEDED;
     z-index: -1;
@@ -14,6 +16,7 @@
 .leftSidebar{
     background-color: #7a5fd0;
     display: inline-block;
+    /* height: 100%; */
     width: 20%;
     vertical-align: top;
     font-size: 18px;
@@ -147,6 +150,9 @@
         max-width: 100%;
     }
     .userDashboard{
+        display: block;
+    }
+    .adminDashboard{
         display: block;
     }
     .leftSidebar{

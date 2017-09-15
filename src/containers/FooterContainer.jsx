@@ -4,7 +4,7 @@ export default class FooterContainer extends Component {
     render() {
         return (
             <div className={'footer'}>
-                <p>© 2017 - Interstitial Cystitis - All Rights Reserved</p>
+                <p>©  TXGenetic Nutrition, All Rights Reserved</p>
             </div>
         )
     }

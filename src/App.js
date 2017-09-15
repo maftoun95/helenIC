@@ -8,6 +8,7 @@ import SignUpPage from './pages/SignUpPage.jsx';
 import UserDashboard from './pages/UserDashboard.jsx';
 import NavContainer from './containers/NavContainer.jsx';
 import FooterContainer from './containers/FooterContainer.jsx';
+import AdminDashboard from './pages/AdminDashboard.jsx';
 
 class App extends Component {
   render() {
@@ -21,6 +22,7 @@ class App extends Component {
           <Route path='/Join' component={SignUpPage} />
           <Route path='/UserDashboard' component={UserDashboard} />
           <Route path='/Login' component={UserDashboard} />
+          <Route path='/AdminDashboard' component={AdminDashboard} />
           <FooterContainer />
         </div>
       </BrowserRouter>
