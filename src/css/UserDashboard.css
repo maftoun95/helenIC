@@ -69,8 +69,10 @@
     display: inline-block;
 }
 
+.active{
+    transition: all 1s ease-in-out;
+}
 .summary {
-    font-family: 'Josefin Slab', serif;
     text-transform: uppercase;
     line-height: 25px;
     padding: 15px;
@@ -78,10 +80,10 @@
 
 .folding-panel {
     display: block;
-    transition: all 0.2s ease-in;
     line-height: 40px;
     background-color: #FBFBFB;
 }
+
 
 .active .summary {
     border-color: transparent;
@@ -92,18 +94,16 @@
 
 .inactive .folding-panel,
 .inactive .accordion-formarea  {
-    transform-origin: 50% 0%;
-    transform: perspective(250px) rotateX(-90deg);
-    transition: all 0.4s ease-in-out;
+    display: none;
     height: 0;
 }
-.active .folding-panel, .active .accordion-formarea {
-    transform: perspective(350px) rotateX(0deg);
-    transition: all 0.4s ease-in-out;
+.active .folding-panel, 
+.active .accordion-formarea {
     text-indent: 40px;
     border-top: 2px solid #3a3042;
     padding:5% 10%;
     cursor: default;
+    transition: all 1s ease-in-out;
 }
 .accordionItemToggler{
     cursor: pointer;
