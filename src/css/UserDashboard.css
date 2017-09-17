@@ -69,9 +69,6 @@
     display: inline-block;
 }
 
-.active{
-    transition: all 1s ease-in-out;
-}
 .summary {
     text-transform: uppercase;
     line-height: 25px;
@@ -84,29 +81,42 @@
     background-color: #FBFBFB;
 }
 
-
 .active .summary {
     border-color: transparent;
-    transition: border-color 0.2s ease-out;
-    /*cursor: default !important;*/
     cursor: pointer;
+    height: 0;
 }
+
+@keyframes sliderDown{
+    from {
+        transform: translateY(-2%);
+      }
+      to {
+        transform: translateY(0);
+      }
+}
+
 
 .inactive .folding-panel,
 .inactive .accordion-formarea  {
+    animation-name: sliderUp;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
     display: none;
-    height: 0;
 }
-.active .folding-panel, 
+.folding-panel, 
 .active .accordion-formarea {
+    animation-name: sliderDown;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
     text-indent: 40px;
     border-top: 2px solid #3a3042;
     padding:5% 10%;
     cursor: default;
-    transition: all 1s ease-in-out;
 }
 .accordionItemToggler{
     cursor: pointer;
+
 }
 .accordion-textarea{
     border-radius: 5px;
