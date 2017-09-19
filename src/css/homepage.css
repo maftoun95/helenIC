@@ -130,6 +130,122 @@
     line-height: 50px;
     padding-left: 25px;
     padding-right: 10px;
-    height: 25px;
     background: transparent;
+}
+
+/*HomeDescription*/
+.HomeDescription, .HomeStory{
+    display: block;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+    width: 98%;
+    margin: 10px auto;
+    box-shadow: 0px 1px 3px 0px #AAA;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow: auto;
+}
+
+.HomeDescription h2{
+    padding: 10px 0;
+    color: #7a5fd0;
+    border-bottom: 2px solid #AAA;
+    width: 95%;
+}
+.HomeDescriptionImage{
+    border: 2px solid #AAA;
+    float: left;
+    vertical-align: top;
+    width: 25%;
+    min-width: 200px;
+    max-width: 300px;
+    margin-right: 10px;
+}
+.HomeDescription p{
+    position: relative;
+    vertical-align: top;
+    min-width: 70%;
+    max-width: 98%;
+    text-align: left;
+    margin: 5px;
+}
+.HomeDescription ul{
+    display: block;
+    min-width: 70%;
+    max-width: 98%;
+    list-style-position: inside;
+}
+
+/*Home Story*/
+.HomeStory{
+    position: relative;
+}
+.HomeStory h3{
+    padding: 10px 10px 5px 5px;
+    color: #7a5fd0;
+    border-bottom: 2px solid #AAA;
+    width: 96%;
+    margin-left: 1%;
+}
+
+.HomeStory img{
+    width: 80px;
+    height: auto;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.HomeStory button{
+    background-color: #61BCCE;
+    color: #FFFFFF;
+    height: 35px;
+    font-size: 18px;
+    vertical-align: top;
+    margin-left: 30px;
+    margin-bottom: 10px;
+    border: none;
+}
+
+/*Link Cards*/
+.LinkCardContainer{
+    width: 98%;
+    margin: 10px auto;
+}
+
+.LinkCard{
+    display: inline-flex;
+    background-color: #FFFFFF;
+    box-shadow: 0px 1px 3px 0px #AAA;
+    vertical-align: top;
+    height: 150px;
+    width: 32%;
+    text-decoration: none;
+}
+.LinkCard:hover{
+    color: black;
+}
+
+.LinkCard + .LinkCard{
+    margin-left: 2%;
+}
+
+.LinkCard img{
+    display: block;
+    height: 50px;;
+}
+
+.LinkCard p{
+    display: block;
+}
+
+/*Disclaimer*/
+
+.Disclaimer{
+    width: 98%;
+    margin: 10px auto;
+    background-color: #FFFFFF;
+    box-shadow: 0px 1px 3px 0px #AAA;
+    box-sizing: border-box;
+    padding: 5px 10px;
 }
