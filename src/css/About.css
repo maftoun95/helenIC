@@ -1,6 +1,5 @@
 .aboutWrapper{
     background-color: #EDEDED;
-    width: 80%;
     margin: 0 auto;
     padding: 10px;
 }
@@ -21,4 +20,60 @@
 .videpPlayer{
     width: 300px;
     height: 200px;
+}
+
+.mission,
+.partnersWrapper{
+    margin: 1%;
+    width: 98%;
+    height: 20%;
+    background-color: #FFFFFF;
+    overflow: hidden;
+    display: inline-block;
+}
+.missionContent{
+    margin: 2%;
+    display: inline-block;
+}
+.partnersContent{
+    margin: 2%;
+}
+.missionContent h3,
+.partnersContent h3{
+    color: #7a5fd0;
+    text-decoration: underline;
+
+}
+.missionImage{
+    float: right;
+    margin-left: 10%;
+    margin-right: 5%;
+    width: 20%;
+    height: 30%;
+}
+.partnerRow{
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+.partnersCard{
+    background: white;
+    /* border: 1px solid red; */
+    width: 25%;
+    padding: 13px;
+    margin: 1%;
+    box-shadow: 0px 1px 3px 0px #AAA;
+    display: inline-block;
+    text-align: center;
+}
+.partnersCard h2{
+    display: inline-block;
+    margin: 0 auto;
+}
+.partnersCard img{
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: inline-block;
+    margin: 1%;
 }
