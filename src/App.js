@@ -4,7 +4,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import AboutPage from './pages/AboutPage.jsx';
 import ContactPage from './pages/ContactPage.jsx';
 import HomePage from './pages/HomePage.jsx';
-import SignUpPage from './pages/SignUpPage.jsx';
+import JoinPage from './pages/JoinPage.jsx';
 import UserDashboard from './pages/UserDashboard.jsx';
 import NavContainer from './containers/NavContainer.jsx';
 import FooterContainer from './containers/FooterContainer.jsx';
@@ -19,7 +19,7 @@ class App extends Component {
           <Route exact={true} path='/' component={HomePage} />
           <Route path='/About' component={AboutPage} />
           <Route path='/Contact' component={ContactPage} />
-          <Route path='/Join' component={SignUpPage} />
+          <Route path='/Join' component={JoinPage} />
           <Route path='/UserDashboard' component={UserDashboard} />
           <Route path='/Login' component={UserDashboard} />
           <Route path='/AdminDashboard' component={AdminDashboard} />

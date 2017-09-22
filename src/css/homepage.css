@@ -249,3 +249,14 @@
     box-sizing: border-box;
     padding: 5px 10px;
 }
+
+@media screen and (max-width: 768px){
+    .LinkCard{
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .LinkCard + .LinkCard{
+        margin: 0 auto;
+    }
+}

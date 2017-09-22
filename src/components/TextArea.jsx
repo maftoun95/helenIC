@@ -1,5 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
+
 const TextArea = (props) => (
     <div className="form-group">
         <label className="form-label">{props.title}</label>
