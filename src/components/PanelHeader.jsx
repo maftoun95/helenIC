@@ -7,7 +7,7 @@ const PanelHeader = props => {
 			<div className={props.className}>
 				<h3 className="aboutLinkToStory">{props.title}</h3>
 				<div className="aboutLinkToStoryButton">MY STORY</div>
-			</div >
+			</div>
 		)
 	}
 	return (
