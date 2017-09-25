@@ -1,79 +1,86 @@
-.aboutWrapper{
-    background-color: #EDEDED;
-    margin: 0 auto;
-    padding: 10px;
+.aboutWrapper {
+	background-color: #ededed;
+	margin: 0 auto;
 }
 
-.card{
-    display: inline-block;
-    text-align: center;  
-    padding-bottom: 4%;
+.card {
+	display: inline-block;
+	text-align: center;
+	padding-bottom: 4%;
 }
 
-.small{
-    width: 45%;
-    padding-right: 5%;
+.small {
+	width: 45%;
+	padding-right: 5%;
 }
-.large{
-    width: 100%;
+.large {
+	width: 100%;
 }
-.videpPlayer{
-    width: 300px;
-    height: 200px;
+.videpPlayer {
+	width: 300px;
+	height: 200px;
 }
 
-.mission,
-.partnersWrapper{
-    margin: 1%;
-    width: 98%;
-    height: 20%;
-    background-color: #FFFFFF;
-    overflow: hidden;
-    display: inline-block;
+/*PANEL*/
+.panel {
+	width: 100%;
+	text-align: center;
 }
-.missionContent{
-    margin: 2%;
-    display: inline-block;
+.panelHeader {
+	margin: 0;
+	color: #f9f9fd;
+	text-transform: uppercase;
+	padding: 5%;
+	font-size: 24px;
+	background-color: #9084d0;
 }
-.partnersContent{
-    margin: 2%;
+.panelContent {
+	margin: 0;
+	background-color: #ffffff;
+	padding: 5%;
 }
-.missionContent h3,
-.partnersContent h3{
-    color: #7a5fd0;
-    text-decoration: underline;
-
+.panelLinkToStory{
+	background-color: #76B9CA;
+	margin: 0;
+	color: #f9f9fd;
+	text-transform: uppercase;
+	padding: 5%;
+	font-size: 24px;
 }
-.missionImage{
-    float: right;
-    margin-left: 10%;
-    margin-right: 5%;
-    width: 20%;
-    height: 30%;
+.aboutLinkToStory{
+	display: inline-block;
 }
-.partnerRow{
-    display: block;
-    margin: auto;
-    text-align: center;
+.aboutLinkToStoryButton{
+	border: 1px solid white;
+	vertical-align: middle;
+	display: inline-block;
+	padding: 1.5% 0;
+	margin-left: 2%;
+	width: 20%;
+	background-color: #76B9CA;
+	overflow: hidden;
 }
-.partnersCard{
-    background: white;
-    /* border: 1px solid red; */
-    width: 25%;
-    padding: 13px;
-    margin: 1%;
-    box-shadow: 0px 1px 3px 0px #AAA;
-    display: inline-block;
-    text-align: center;
+.partnerRow {
+	display: block;
+	text-align: center;
+	background-color: #ffffff;
 }
-.partnersCard h2{
-    display: inline-block;
-    margin: 0 auto;
+.partnersCard {
+	background: white;
+	/* border: 1px solid red; */
+	width: 25%;
+	padding: 13px;
+	margin: 1%;
+	display: inline-block;
+	text-align: center;
 }
-.partnersCard img{
-    border-radius: 50%;
-    width: 70px;
-    height: 70px;
-    display: inline-block;
-    margin: 1%;
+.partnersCard h2 {
+	margin: 0 auto;
+	color: #7a5fd0;
+}
+.partnersCard img {
+	border-radius: 50%;
+	width: 250px;
+	height: 250px;
+	margin: 1%;
 }
