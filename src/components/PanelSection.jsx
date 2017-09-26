@@ -6,8 +6,41 @@ import Partner from "./Partners.jsx";
 
 const PanelSection = props => {
 	const hasPartner = props.partner;
-	const hasContent = props.panelContent
-	if (hasPartner) {
+	const hasButton = props.panelButton;
+	const hasImage = props.panelContentImage;
+	const hasHeader = props.panelHeader;
+	if (hasImage && hasButton) {
+		if (hasHeader) {
+			return (
+				<div className="panel">
+					<PanelHeader
+						title={props.panelHeader}
+						className="panelHeader"
+					/>
+					<PanelContent
+						className="researchContent"
+						content={props.panelContent}
+						image={props.panelContentImage}
+						buttonContent={props.panelButton}
+					/>
+				</div>
+			)
+		}
+		else {
+			return (
+				<div className="panel">
+					<PanelContent
+						className="researchContent"
+						content={props.panelContent}
+						image={props.panelContentImage}
+						buttonContent={props.panelButton}
+					/>
+				</div>
+			)
+		}
+	}
+
+	else if (hasPartner) {
 		return (
 			<div className="panel">
 				<PanelHeader title={props.panelHeader} className="panelHeader" />
@@ -15,13 +48,13 @@ const PanelSection = props => {
 			</div>
 		);
 	}
-	else if (!hasContent) {
+	else if (hasButton) {
 		return (
 			<div className="panel">
 				<PanelHeader
 					title={props.panelHeader}
 					className="panelLinkToStory"
-					button={true}
+					buttonContent={props.panelButton}
 				/>
 			</div>
 		)
