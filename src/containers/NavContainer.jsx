@@ -14,6 +14,7 @@ export default class NavContainer extends Component {
                     <NavLink className={'link'} linkTo={'About'} link={'About'} />
                     <NavLink className={'link'} linkTo={'Join'} link={'Join'} />
                     <NavLink className={'link'} linkTo={'Login'} link={'Login'} />
+                    <NavLink className={'link'} linkTo={'Signin'} link={'Sign In'} />
                 </div>
             </div>
         )

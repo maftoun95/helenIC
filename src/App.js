@@ -5,12 +5,24 @@ import AboutPage from './pages/AboutPage.jsx';
 import ContactPage from './pages/ContactPage.jsx';
 import HomePage from './pages/HomePage.jsx';
 import JoinPage from './pages/JoinPage.jsx';
+import SignInPage from './pages/SignInPage.jsx';
 import UserDashboard from './pages/UserDashboard.jsx';
 import NavContainer from './containers/NavContainer.jsx';
 import FooterContainer from './containers/FooterContainer.jsx';
 import AdminDashboard from './pages/AdminDashboard.jsx';
 
 class App extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            isAuthenticated: false
+        }
+    }
+    userHasAuthenticated(authenticated){
+        this.setState({
+            isAuthenticated: authenticated
+        });
+    }
   render() {
     return (
       <BrowserRouter>
@@ -20,6 +32,7 @@ class App extends Component {
           <Route path='/About' component={AboutPage} />
           <Route path='/Contact' component={ContactPage} />
           <Route path='/Join' component={JoinPage} />
+          <Route path='/Signin' component={SignInPage} />
           <Route path='/UserDashboard' component={UserDashboard} />
           <Route path='/Login' component={UserDashboard} />
           <Route path='/AdminDashboard' component={AdminDashboard} />

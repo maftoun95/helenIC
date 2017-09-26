@@ -45,7 +45,7 @@
     display: inline-block;
     width: 300px;
 }
-button{
+.LoginCard button, .JoinCard button{
     background-color: #61BCCE;
     color: #FFFFFF;
     height: 35px;
