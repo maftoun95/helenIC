@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
 const Information = props => {
-    return (
-        <div className={props.className}>
-            {props.information.map(item => <p>{item}</p>)}
-        </div>
-    )
-}
+	return (
+		<div className={props.className}>
+			<p>{props.information}</p>
+		</div>
+	);
+};
 
 export default Information;
