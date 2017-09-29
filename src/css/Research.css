@@ -1,0 +1,39 @@
+.researchWrapper{
+	background-color: #ffffff;
+}
+.horizontalRow{
+	width: 75%;
+	border: 1px solid #E5E5E5;
+}
+.researchContent > img{
+	display: inline-block;
+	width: 400px;
+	height: 300px;
+	margin: 3%;
+}
+.researchContentInformation{
+	width: 40%;
+	vertical-align: top;
+	margin: 2%;
+	display: inline-block;
+}
+.researchContentInformation h1{
+	text-align: left;
+	text-transform: uppercase;
+}
+.researchContentInformation p{
+	text-align: left;
+}
+.researchButtonLink{
+	float: left;
+	padding: 3% 0;
+	width: 30%;
+	background-color: #76B9CA;
+	overflow: hidden;
+	color: #FFFFFF;
+	border: none;
+	font-size: 16px;
+}
+.researchButtonLink:hover{
+	cursor: pointer;
+}

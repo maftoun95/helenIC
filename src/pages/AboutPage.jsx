@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "../css/About.css";
 
 import Disclaimer from "./../components/Disclaimer";
-import Partner from "./../components/Partners";
 import PanelSection from "./../components/PanelSection.jsx";
 
 export default class AboutPage extends Component {
@@ -33,3 +32,4 @@ export default class AboutPage extends Component {
 		);
 	}
 }
+export default AboutPage;

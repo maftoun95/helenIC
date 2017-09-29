@@ -1,12 +1,12 @@
 import React from "react";
 
 const PanelHeader = props => {
-	const hasButton = props.button
+	const hasButton = props.buttonContent
 	if (hasButton) {
 		return (
 			<div className={props.className}>
 				<h3 className="aboutLinkToStory">{props.title}</h3>
-				<div className="aboutLinkToStoryButton">MY STORY</div>
+				<div className="aboutLinkToStoryButton">{props.buttonContent}</div>
 			</div>
 		)
 	}
