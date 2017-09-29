@@ -4,11 +4,15 @@ import {
     AuthenticationDetails,
     CognitoUser
 } from 'amazon-cognito-identity-js';
-import {cognitoConfig} from '../../secrets/cognitoConfig.js';
+import { cognitoConfig } from '../../secrets/cognitoConfig.js';
 import InputLabel from '../InputLabel.jsx';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { userLogin } from '../../actions/appActions.js';
 
-export default class SignInCard extends React.Component {
-    constructor(props){
+
+class SignInCard extends React.Component {
+    constructor(props) {
         super(props);
         this.state = {
             SignInEmail: '',
@@ -23,10 +27,10 @@ export default class SignInCard extends React.Component {
         this.validateInformation = this.validateInformation.bind(this);
     }
 
-     validateInformation() {
+    validateInformation() {
         let validEmail = this.validateEmail();
         let validPassword = this.validatePassword();
-        this.setState({ ...this.state, EmailError: !validEmail, PasswordError: !validPassword});
+        this.setState({ ...this.state, EmailError: !validEmail, PasswordError: !validPassword });
         if (validEmail && validPassword) {
             return true;
         }
@@ -36,16 +40,16 @@ export default class SignInCard extends React.Component {
         }
     }
     validateEmail() {
-        if(this.state.SignInEmail){
+        if (this.state.SignInEmail) {
             let reg = /\S+@\S+\.\S+/;
             return reg.test(this.state.SignInEmail);
         }
         return false;
     }
 
-    validatePassword(){
-        if(this.state.SignInPassword){
-            return(this.state.SignInPassword.length > 5)
+    validatePassword() {
+        if (this.state.SignInPassword) {
+            return (this.state.SignInPassword.length > 5)
         }
         return false;
     }
@@ -57,24 +61,24 @@ export default class SignInCard extends React.Component {
     }
 
     submit() {
-        if(this.validateInformation()){
+        if (this.validateInformation()) {
             const userPool = new CognitoUserPool({
                 UserPoolId: cognitoConfig.userPoolId,
                 ClientId: cognitoConfig.clientId
             });
-    
+
             const user = new CognitoUser({
                 Username: this.state.SignInEmail,
                 Pool: userPool
             });
-    
+
             const authenticationData = {
                 Username: this.state.SignInEmail,
                 Password: this.state.SignInPassword
             };
-    
+
             const authenticationDetails = new AuthenticationDetails(authenticationData);
-    
+
             return new Promise((resolve, reject) => {
                 user.authenticateUser(authenticationDetails, {
                     onSuccess: (result) => {
@@ -95,22 +99,23 @@ export default class SignInCard extends React.Component {
         }
     }
 
-    async handleSubmit(e){
+    async handleSubmit(e) {
         e.preventDefault();
-        try{
+        try {
             await this.submit();
         }
-        catch(e){
+        catch (e) {
 
         }
     }
     render() {
+        
         let signInErrorClass = this.state.SignInError ? 'SignInError' : 'hidden';
         return (
             <div className='SignInCard'>
                 <form id='SignInForm'>
-                    <InputLabel id={'SignInEmail'} type={'email'} labelText={'Email: '} value={this.state.LoginEmail} error={this.state.EmailError} onChange={this.handleChange}/>
-                    <InputLabel id={'SignInPassword'} type={'password'} labelText={'Password: '} value={this.state.LoginPassword} error={this.state.PasswordError} onChange={this.handleChange}/>
+                    <InputLabel id={'SignInEmail'} type={'email'} labelText={'Email: '} value={this.state.LoginEmail} error={this.state.EmailError} onChange={this.handleChange} />
+                    <InputLabel id={'SignInPassword'} type={'password'} labelText={'Password: '} value={this.state.LoginPassword} error={this.state.PasswordError} onChange={this.handleChange} />
                     <button onClick={this.handleSubmit}>Login!</button>
                     <label className={signInErrorClass}>Login Error, please check your email and password</label>
                 </form>
@@ -118,3 +123,18 @@ export default class SignInCard extends React.Component {
         )
     }
 }
+
+
+function mapStateToProps(state, ownProps){
+    return {
+        loggedIn: state.loggedIn
+    };
+}
+
+function mapDispatchToProps(dispatch){
+    return {
+        actions:bindActionCreators({userLogin}, dispatch)
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(SignInCard);

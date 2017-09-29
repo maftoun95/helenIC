@@ -64,13 +64,15 @@
 	display: block;
 	text-align: center;
 	background-color: #ffffff;
+	/* border: 1px solid green; */
 }
 .partnersCard {
 	background: white;
-	/* border: 1px solid red; */
-	width: 25%;
-	padding: 13px;
-	margin: 1%;
+	width: 29%;
+	padding: 7px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	
 	display: inline-block;
 	text-align: center;
 }

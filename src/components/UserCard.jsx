@@ -3,6 +3,15 @@ import Image from './Image';
 
 
 export default class UserCard extends Component {
+    constructor(){
+        super();
+        this.handleClick = this.handleClick.bind(this);
+    }
+    handleClick(event){
+        event.preventDefault();
+        const button = event.target;
+        
+    }
     render() {
         return (
             <div className={this.props.className}>
@@ -28,7 +37,7 @@ export default class UserCard extends Component {
                 </div>
                 <hr/>
                 <div className={'buttonWrapper'}>
-                    <button className={'userPageButton'}>View Submissions</button>
+                    <button className={'userPageButton'} onClick={this.handleClick}>View Submissions</button>
                 </div>
             </div>
         )

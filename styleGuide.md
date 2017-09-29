@@ -13,3 +13,6 @@ Example import at the top of a route component: `import './homepage.css';`
 We are using The Container Component pattern. What this means functionally is that whenever there is a component that needs to fetch data, it will have a coresponding container component that will handle the actual data fetching and use the results to render dumb components.
 Besides the data fetching use case, we are using containers to render smaller sub components.
 [A simple primer on The Container Component pattern](https://medium.com/@learnreact/container-components-c0e67432e005)
+
+### Error and Event
+For the sake of clarity and ease of reading please write events and errors in your code verbosely as opposed to writing e for both. This is just to make it faster to grokk what we are reading.

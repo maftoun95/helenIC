@@ -1,12 +1,11 @@
+import React, { Component } from "react";
 import "../css/About.css";
-
-import React from "react";
 
 import Disclaimer from "./../components/Disclaimer";
 import Partner from "./../components/Partners";
 import PanelSection from "./../components/PanelSection.jsx";
 
-export default class AboutPage extends React.Component {
+export default class AboutPage extends Component {
 	render() {
 		return (
 			<div className="aboutWrapper">
