@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { Redirect } from 'react-router';
 import SidebarLeft from '../components/SidebarLeft.jsx';
 import SidebarRight from '../components/SidebarRight.jsx';
 import CenterDashboard from '../components/CenterDashboard.jsx';
 import '../css/UserDashboard.css';
 
-export default class UserDashboard extends Component {
+class UserDashboard extends Component {
     render(){
-        return(
+        return ((!this.props.loggedIn) ? <Redirect to='/' /> : 
+        
             <div className={'userDashboard'}>
                 <SidebarLeft className={'leftSidebar'} />
                 <CenterDashboard className={'centerConsole'} />
@@ -15,3 +18,11 @@ export default class UserDashboard extends Component {
         )
     }
 }
+
+function mapStateToProps(state, ownProps){
+    return {
+        loggedIn : state.loggedIn
+    }
+}
+
+export default connect(mapStateToProps)(UserDashboard);

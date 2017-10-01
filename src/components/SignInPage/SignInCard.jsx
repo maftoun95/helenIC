@@ -4,11 +4,12 @@ import {
     AuthenticationDetails,
     CognitoUser
 } from 'amazon-cognito-identity-js';
+import { Redirect } from 'react-router';
 import { cognitoConfig } from '../../secrets/cognitoConfig.js';
 import InputLabel from '../InputLabel.jsx';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { userLogin } from '../../actions/appActions.js';
+import { userLogin, saveUserData } from '../../actions/appActions.js';
 
 
 class SignInCard extends React.Component {
@@ -22,6 +23,7 @@ class SignInCard extends React.Component {
             SignInError: false
         }
         this.submit = this.submit.bind(this);
+        this.saveUser = this.saveUser.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChange = this.handleChange.bind(this);
         this.validateInformation = this.validateInformation.bind(this);
@@ -70,7 +72,7 @@ class SignInCard extends React.Component {
             const user = new CognitoUser({
                 Username: this.state.SignInEmail,
                 Pool: userPool
-            });
+            }); 
 
             const authenticationData = {
                 Username: this.state.SignInEmail,
@@ -82,10 +84,10 @@ class SignInCard extends React.Component {
             return new Promise((resolve, reject) => {
                 user.authenticateUser(authenticationDetails, {
                     onSuccess: (result) => {
-                        console.log(result);
                         this.setState({
-                            SignInError: false
-                        })
+                            SignInError: false,
+                        });
+                        this.props.actions.userLogin(user);
                         resolve();
                     },
                     onFailure: (err) => {
@@ -99,17 +101,38 @@ class SignInCard extends React.Component {
         }
     }
 
+    saveUser(){
+        if(this.props.cogUser.username){
+            return new Promise((resolve, reject) => {
+                this.props.cogUser.getUserAttributes((err, result) => {
+                    if(err)
+                    {
+                        reject(err);
+                    }
+                    else{
+                        this.props.actions.saveUserData(result);
+                        resolve();
+                    }
+                });
+            });
+        }
+    }
     async handleSubmit(e) {
         e.preventDefault();
         try {
             await this.submit();
+            await this.saveUser();
         }
         catch (e) {
-
+            console.log(e);
         }
     }
     render() {
-        
+        if(this.props.loggedIn){
+            return(
+                <Redirect to='/UserDashboard' />
+            )
+        }
         let signInErrorClass = this.state.SignInError ? 'SignInError' : 'hidden';
         return (
             <div className='SignInCard'>
@@ -127,13 +150,14 @@ class SignInCard extends React.Component {
 
 function mapStateToProps(state, ownProps){
     return {
-        loggedIn: state.loggedIn
+        loggedIn: state.loggedIn,
+        cogUser: state.cogUser
     };
 }
 
 function mapDispatchToProps(dispatch){
     return {
-        actions:bindActionCreators({userLogin}, dispatch)
+        actions:bindActionCreators({userLogin, saveUserData}, dispatch)
     }
 }
 

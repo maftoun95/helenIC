@@ -6,7 +6,6 @@ import '../css/SignIn.css';
 
 export default class SignInPage extends React.Component {
     render() {
-        console.log(this.props);
         return (
             <div>
                 <div className='SignInHeader'>

@@ -48,6 +48,9 @@
     color: #7a5fd0;
     text-decoration: none;
 }
+.linksBar span{
+    cursor: pointer;
+}
 
 .linksBar .link:hover{
     color: #251066;
