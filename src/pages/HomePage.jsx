@@ -1,6 +1,4 @@
 import React from 'react';
-
-import Disclaimer from '../components/Disclaimer.jsx';
 import HomeDescription from '../components/HomeDescription.jsx';
 import HomeStory from '../components/HomeStory.jsx';
 import LinkCardContainer from '../containers/LinkCardContainer.jsx';
@@ -28,7 +26,6 @@ export default class HomePage extends React.Component {
             linkTo: '/news'
           }
         ]} />
-        <Disclaimer className="disclaimer" />
       </div>
     )
   }
