@@ -1,0 +1,10 @@
+.StandardButton{
+    margin-top: 10px;
+    height: 40px;
+    width: 160px;
+    color: white;
+    font-size: larger;
+    background-color: #61bbcd;
+    border: none;
+    border-radius: 5px;
+}

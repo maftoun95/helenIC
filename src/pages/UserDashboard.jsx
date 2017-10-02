@@ -8,13 +8,14 @@ import '../css/UserDashboard.css';
 
 class UserDashboard extends Component {
     render(){
-        return ((!this.props.loggedIn) ? <Redirect to='/' /> : 
-        
-            <div className={'userDashboard'}>
-                <SidebarLeft className={'leftSidebar'} />
-                <CenterDashboard className={'centerConsole'} />
-                <SidebarRight className={'rightSidebar'} />
-            </div>
+        return (
+            this.props.loggedIn ?
+                <div className={'userDashboard'}>
+                    <SidebarLeft className={'leftSidebar'} />
+                    <CenterDashboard className={'centerConsole'} />
+                    <SidebarRight className={'rightSidebar'} />
+                </div> : 
+                <Redirect to='/' />
         )
     }
 }

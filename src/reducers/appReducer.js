@@ -23,8 +23,9 @@ export default function appReducer(state = initialState, action){
 
         case 'USER_LOGOUT':
         tempState.loggedIn = false;
+        tempState.userData = {};
         tempState.cogUser.signOut();
-        tempState.cogUser = null;
+        tempState.cogUser = {};
         return tempState;
 
         default:

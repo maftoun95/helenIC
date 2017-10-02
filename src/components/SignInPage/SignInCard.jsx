@@ -5,6 +5,7 @@ import {
     CognitoUser
 } from 'amazon-cognito-identity-js';
 import { Redirect } from 'react-router';
+import { Link } from 'react-router-dom';
 import { cognitoConfig } from '../../secrets/cognitoConfig.js';
 import InputLabel from '../InputLabel.jsx';
 import { connect } from 'react-redux';
@@ -128,21 +129,20 @@ class SignInCard extends React.Component {
         }
     }
     render() {
-        if(this.props.loggedIn){
-            return(
-                <Redirect to='/UserDashboard' />
-            )
-        }
+
         let signInErrorClass = this.state.SignInError ? 'SignInError' : 'hidden';
         return (
-            <div className='SignInCard'>
-                <form id='SignInForm'>
-                    <InputLabel id={'SignInEmail'} type={'email'} labelText={'Email: '} value={this.state.LoginEmail} error={this.state.EmailError} onChange={this.handleChange} />
-                    <InputLabel id={'SignInPassword'} type={'password'} labelText={'Password: '} value={this.state.LoginPassword} error={this.state.PasswordError} onChange={this.handleChange} />
-                    <button onClick={this.handleSubmit}>Login!</button>
-                    <label className={signInErrorClass}>Login Error, please check your email and password</label>
-                </form>
-            </div>
+            this.props.loggedIn ? 
+                <Redirect to='/UserDashboard' /> :
+                <div className='SignInCard'>
+                    <form id='SignInForm'>
+                        <InputLabel id={'SignInEmail'} type={'email'} labelText={'Email: '} value={this.state.LoginEmail} error={this.state.EmailError} onChange={this.handleChange} />
+                        <InputLabel id={'SignInPassword'} type={'password'} labelText={'Password: '} value={this.state.LoginPassword} error={this.state.PasswordError} onChange={this.handleChange} />
+                        <Link className={'ForgotPassword'} to='/'>Forgot Password?   Click Here</Link>
+                        <button className='StandardButton' onClick={this.handleSubmit}>Login</button>
+                        <label className={signInErrorClass}>Login Error, please check your email and password</label>
+                    </form>
+                </div>
         )
     }
 }
