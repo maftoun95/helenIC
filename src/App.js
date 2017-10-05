@@ -13,6 +13,7 @@ import NavContainer from './containers/NavContainer.jsx';
 import FooterContainer from './containers/FooterContainer.jsx';
 import AdminDashboard from './pages/AdminDashboard.jsx';
 import configureStore from './store/configureStore.js';
+import ResearchPage from './pages/ResearchPage.jsx';
 import './css/Generic.css';
 
 const store = configureStore()
@@ -27,6 +28,7 @@ class App extends Component {
             <Route exact={true} path='/' component={HomePage} />
             <Route path='/About' component={AboutPage} />
             <Route path='/Journey' component={JourneyPage} />
+            <Route path='/Research' component={ResearchPage} />
             <Route path='/Contact' component={ContactPage} />
             <Route path='/Join' component={JoinPage} />
             <Route path='/Signin' component={SignInPage} />

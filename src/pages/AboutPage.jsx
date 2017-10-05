@@ -24,6 +24,7 @@ export default class AboutPage extends Component {
 				/>
 				<PanelSection
 					panelHeader="Want to learn more? Read My Story"
+					panelButton="My Story"
 				/>
 			</div>
 		);
