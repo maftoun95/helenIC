@@ -1,6 +1,7 @@
 /* Cute shit to play with later: */
     /* background: linear-gradient(135deg, #7c1599 0%,#921099 48%,#7e4ae8 100%); */
 
+<<<<<<< HEAD
 
 /* Nav Bar */
 .navWrapper {
@@ -59,6 +60,8 @@
     border-right: 3px solid #563EA3;
 }
 
+=======
+>>>>>>> 96f111877495ae956e2c84ca1a748b23684e9926
 /* Intro */
 .introWrapper {
     display: flex;
@@ -109,30 +112,6 @@
 
 .contentItem img {
     border-radius: 100px;
-}
-
-/* Footer */
-
-
-.footer {
-    position: relative;
-    z-index: 100;
-    color: #D6D6D6;
-    background-color: #FFFFFF;
-    font-size: 13px;
-    height: 50px;
-    width: 100%;
-    margin: 0px;
-    box-shadow: 0px -1px 3px 0px #AAA;
-}
-.footer > p {
-    display: inline;
-    margin: 0px;
-    margin-left: 20px;
-    line-height: 50px;
-    padding-left: 25px;
-    padding-right: 10px;
-    background: transparent;
 }
 
 /*HomeDescription*/
@@ -244,12 +223,13 @@
 /*Disclaimer*/
 
 .Disclaimer{
-    width: 98%;
-    margin: 10px auto;
+    width: 100%;
     background-color: #FFFFFF;
-    box-shadow: 0px 1px 3px 0px #AAA;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: smaller;
     box-sizing: border-box;
-    padding: 5px 10px;
+    padding: 5px 20px;
+    text-align: center;
 }
 
 @media screen and (max-width: 768px){

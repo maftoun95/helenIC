@@ -1,4 +1,39 @@
 .JoinCardContainer{
+    margin-top: 40px;
+    display: flex;
+}
+
+.JoinCard{
+    width: 48%;
+    height: 230px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.JoinCard h3{
+    width: 250px;
+    height: 80px;
+    text-align: center;
+}
+.JoinCard + .JoinCard{
+    border-left: 1px solid #AAA;
+}
+@media screen and (max-width: 768px) {
+    .JoinCardContainer{
+        display: block;
+        width: 100%;
+    }
+    .JoinCard{
+        width: 95%;
+        margin: 0 auto;
+        border-bottom: 1px solid #AAA;
+    }
+    .JoinCard + .JoinCard{
+        border-left: none;
+    }
+}
+
+/* .JoinCardContainer{
     display: flex;
 }
 .JoinCard, .LoginCard{
@@ -17,19 +52,6 @@
     margin-left: 10px;
     display: flex;
     flex-direction: column;
-}
-.InputLabel{
-    margin-top: 10px;
-    width: 100%;
-}
-.InputLabel label{
-    display: inline-block;
-    width: 180px;
-    text-align: right;
-}
-.InputLabel input{
-    margin-left: 10px;
-    width: 200px;
 }
 .LoginCard{
     background-color: #FFFFFF;
@@ -66,4 +88,4 @@
         display: block;
         width: 98%;
     }
-}
+} */

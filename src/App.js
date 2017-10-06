@@ -14,23 +14,11 @@ import NavContainer from './containers/NavContainer.jsx';
 import FooterContainer from './containers/FooterContainer.jsx';
 import AdminDashboard from './pages/AdminDashboard.jsx';
 import configureStore from './store/configureStore.js';
+import './css/Generic.css';
 
 const store = configureStore()
 
-
-
 class App extends Component {
-  // constructor(props){
-  //     super(props);
-  //     this.state = {
-  //         isAuthenticated: false
-  //     }
-  // }
-  // userHasAuthenticated(authenticated){
-  //     this.setState({
-  //         isAuthenticated: authenticated
-  //     });
-  // }
   render() {
     return (
       <Provider store={store}>
@@ -45,7 +33,6 @@ class App extends Component {
             <Route path='/Join' component={JoinPage} />
             <Route path='/Signin' component={SignInPage} />
             <Route path='/UserDashboard' component={UserDashboard} />
-            <Route path='/Login' component={UserDashboard} />
             <Route path='/AdminDashboard' component={AdminDashboard} />
             <FooterContainer />
           </div>
