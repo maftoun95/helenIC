@@ -3,6 +3,7 @@ import { Provider } from 'react-redux';
 import './css/homepage.css';
 import { BrowserRouter, Route } from 'react-router-dom';
 import AboutPage from './pages/AboutPage.jsx';
+import ResearchPage from './pages/ResearchPage.jsx';
 import JourneyPage from './pages/JourneyPage.jsx'
 import ContactPage from './pages/ContactPage.jsx';
 import HomePage from './pages/HomePage.jsx';
@@ -38,6 +39,7 @@ class App extends Component {
             <NavContainer />
             <Route exact={true} path='/' component={HomePage} />
             <Route path='/About' component={AboutPage} />
+            <Route path='/Research' component={ResearchPage} />
             <Route path='/Journey' component={JourneyPage} />
             <Route path='/Contact' component={ContactPage} />
             <Route path='/Join' component={JoinPage} />

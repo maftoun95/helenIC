@@ -11,8 +11,8 @@ export default class NavContainer extends Component {
                     <Image className={'navImage'} image={"../../pictures/master_logo.jpg"} />
                 </Link>
                 <div className={'linksBar'}>
-                    <NavLink className={'link'} linkTo={'About'} link={'About'} />
                     <NavLink className={'link'} linkTo={'Journey'} link={'Journey'} />
+                    <NavLink className={'link'} linkTo={'About'} link={'About'} />
                     <NavLink className={'link'} linkTo={'Research'} link={'Research'} />
                     <NavLink className={'link'} linkTo={'Join'} link={'Join'} />
                     <NavLink className={'link'} linkTo={'Login'} link={'Login'} />

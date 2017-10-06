@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "../css/About.css";
 
 import Disclaimer from "./../components/Disclaimer";
+import Partner from "./../components/Partners";
 import PanelSection from "./../components/PanelSection.jsx";
 
 export default class AboutPage extends Component {
@@ -26,10 +27,10 @@ export default class AboutPage extends Component {
 				/>
 				<PanelSection
 					panelHeader="Want to learn more? Read My Story"
+					panelButton="My Story"
 				/>
 				<Disclaimer className="disclaimer" />
 			</div>
 		);
 	}
 }
-export default AboutPage;

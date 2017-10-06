@@ -35,6 +35,7 @@ const PanelContent = props => {
 			</div>
 		)
 	}
+	
 	return (
 		<p className={props.className}>{props.content}</p>
 
