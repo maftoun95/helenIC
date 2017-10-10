@@ -1,6 +1,67 @@
 /* Cute shit to play with later: */
     /* background: linear-gradient(135deg, #7c1599 0%,#921099 48%,#7e4ae8 100%); */
 
+<<<<<<< HEAD
+
+/* Nav Bar */
+.navWrapper {
+    display: flex;
+    /* justify-content:  */
+    height: 150px;
+    background-color: #fff;;
+    border-bottom: 1px solid #AAA;
+    box-shadow: 0px 1px 3px 0px #AAA;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+    z-index: 1;
+    position: relative;
+    align-items: center;
+}
+
+.navImage {
+    /* max-width: 100%; */
+    height: 125px;
+    margin-right: 5%;
+    margin-left: 10%;
+    display: inline-block;
+    overflow: hidden;
+}
+
+
+.linksBar {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    right: 50px;
+    height: 40px;
+    /* background-color: lightgray; */
+    /* margin-top: 20px; */
+    overflow: hidden;
+}
+
+.linksBar .link {
+    vertical-align: top;
+    display: inline-block;
+    line-height: 38px;
+    width: 80px;
+    text-align: center;
+    margin-left: 10px;
+    font-size: 18px;
+    color: #7a5fd0;
+    text-decoration: none;
+}
+
+.linksBar .link:hover{
+    color: #251066;
+}
+
+.sideline {
+    border-right: 3px solid #563EA3;
+}
+
+=======
+>>>>>>> 96f111877495ae956e2c84ca1a748b23684e9926
 /* Intro */
 .introWrapper {
     display: flex;
