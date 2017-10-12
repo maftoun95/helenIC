@@ -11,7 +11,10 @@ import Submissions from '../components/Submissions.jsx';
 
 class UserDashboard extends Component {
     render() {
-        const tabs = ["Submissions"];
+        const tabs = [{
+            to: 'Submissions',
+            link: 'Submissions'
+        }];
         return (
             this.props.loggedIn ?
                 <div className={'userDashboard'}>
