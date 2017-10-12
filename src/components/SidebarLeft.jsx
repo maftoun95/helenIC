@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
+import NavLink from './NavLink.jsx';
 
 export default class SidebarLeft extends Component {
-    render(){
-
+    render() {
+        const tabsList = this.props.tabs.map(function(tab, index){
+            return <li key={ index }> <NavLink className={'userDashboardNav'} linkTo={`/UserDashboard/${tab}`} link={ tab } /> </li>
+        })
         return (
             <div className={this.props.className}>
                 <ul>
-                    <li>Dashboard</li>
-                    <li>Words from Helen</li>
-                    <li>Account</li>
+                    { tabsList }
                 </ul>
             </div>
         )
