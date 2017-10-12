@@ -30,10 +30,10 @@ class NavContainer extends Component {
                     <Image className={'navImage'} image={"../../pictures/master_logo.jpg"} />
                 </Link>
                 <div className={'linksBar'}>
-                    <NavLink className={'navLink'} linkTo={'About'} link={'About'} />
-                    <NavLink className={'navLink'} linkTo={'Journey'} link={'Journey'} />
-                    <NavLink className={'navLink'} linkTo={'Research'} link={'Research'} />
-                    <NavLink className={'navLink'} linkTo={'Join'} link={'Join'} />
+                    <NavLink className={'navLink'} linkTo={'/About'} link={'About'} />
+                    <NavLink className={'navLink'} linkTo={'/Journey'} link={'Journey'} />
+                    <NavLink className={'navLink'} linkTo={'/Research'} link={'Research'} />
+                    <NavLink className={'navLink'} linkTo={'/Join'} link={'Join'} />
                     {this.conditionalSignInRender()}
                 </div>
             </div>

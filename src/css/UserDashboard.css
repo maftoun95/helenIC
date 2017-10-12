@@ -32,6 +32,18 @@
     padding: 11px 0;
 }
 
+.userDashboardNav {
+    vertical-align: top;
+    display: inline-block;
+    line-height: 38px;
+    width: 80px;
+    text-align: center;
+    margin-left: 10px;
+    font-size: 18px;
+    color: white; 
+    text-decoration: none;
+}
+
 /* Right Sidebar */
 .rightSidebar{
     vertical-align: top;
