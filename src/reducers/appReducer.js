@@ -13,19 +13,19 @@ export default function appReducer(state = initialState, action){
         return tempState;
 
         case 'SAVE_USER_DATA':
-        let tempData = action.data.map((userAttribute) => {
-            return {
-                [userAttribute.Name]: userAttribute.Value,
-            }
-        });
-        tempState.userData = tempData;
+            let tempData = action.data.map((userAttribute) => {
+                return {
+                    [userAttribute.Name]: userAttribute.Value,
+                }
+            });
+            tempState.userData = tempData;
         return tempState;
 
         case 'USER_LOGOUT':
-        tempState.loggedIn = false;
-        tempState.userData = {};
-        tempState.cogUser.signOut();
-        tempState.cogUser = {};
+            tempState.loggedIn = false;
+            tempState.userData = {};
+            tempState.cogUser.signOut();
+            tempState.cogUser = {};
         return tempState;
 
         default:

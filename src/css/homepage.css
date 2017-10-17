@@ -1,244 +1,77 @@
 /* Cute shit to play with later: */
     /* background: linear-gradient(135deg, #7c1599 0%,#921099 48%,#7e4ae8 100%); */
 
-<<<<<<< HEAD
 
-/* Nav Bar */
-.navWrapper {
+.homePage .panelHeader{
+    text-align: center;
+}
+.homePageTripleImage{
+    text-align: center;
+}
+.homePageTripleImage p{
+    margin: 20px;
+}
+.homePageTripleImage .imageContainer{
     display: flex;
-    /* justify-content:  */
-    height: 150px;
-    background-color: #fff;;
-    border-bottom: 1px solid #AAA;
-    box-shadow: 0px 1px 3px 0px #AAA;
-    width: 100%;
-    margin: 0 auto;
-    padding: 10px;
-    z-index: 1;
-    position: relative;
+    text-align: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+.homePageTripleImage .imageContainer div{
+    width: 30%;
+    margin: 0 1%;
+}
+.homePageTripleImage img{
+    height: 100px;
+}
+.homePageTripleImage .imageContainer p{
+    font-weight: bold;
+    font-size: small;
+}
+.homePage .secondPanel{
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
-
-.navImage {
-    /* max-width: 100%; */
-    height: 125px;
-    margin-right: 5%;
-    margin-left: 10%;
-    display: inline-block;
-    overflow: hidden;
-}
-
-
-.linksBar {
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    right: 50px;
-    height: 40px;
-    /* background-color: lightgray; */
-    /* margin-top: 20px; */
-    overflow: hidden;
-}
-
-.linksBar .link {
-    vertical-align: top;
-    display: inline-block;
-    line-height: 38px;
-    width: 80px;
-    text-align: center;
-    margin-left: 10px;
-    font-size: 18px;
-    color: #7a5fd0;
-    text-decoration: none;
-}
-
-.linksBar .link:hover{
-    color: #251066;
-}
-
-.sideline {
-    border-right: 3px solid #563EA3;
-}
-
-=======
->>>>>>> 96f111877495ae956e2c84ca1a748b23684e9926
-/* Intro */
-.introWrapper {
-    display: flex;
-    background: #EDEDED;
-    width: 80%;
-    margin: 0 auto;
-    padding: 10px;
-}
-
-.textContainer {
-    display: inline-block;
-    text-align: center;
-    min-width: 20%;
-    margin: 5%;
-}
-
-.text {
-    font-size: 32px;
-    /*font-family: cursive;*/
-    box-shadow: 3px 3px 3px #4B3A3A;
-    overflow: hidden;
-    padding: 0 10px;
-}
-
-.introImage {
-    max-width: 100%;
-    height: auto;
-    display: inline-block;
-    overflow: hidden;
-    box-shadow: 3px 3px 3px #4B3A3A;
-    border-radius: 18px;
-}
-
-/* Content / Content Item  */
-.content {
-    display: flex;
-    width: 80%;
-    margin: 0 auto;
-    background: #EDEDED;
-    padding: 10px;
-}
-
-.contentItem {
-    justify-content: space-around;
-    text-align: center;
-    margin: 15px;
-}
-
-.contentItem img {
-    border-radius: 100px;
-}
-
-/*HomeDescription*/
-.HomeDescription, .HomeStory{
-    display: block;
-    box-sizing: border-box;
-    background-color: #FFFFFF;
-    width: 98%;
-    margin: 10px auto;
-    box-shadow: 0px 1px 3px 0px #AAA;
-    padding-left: 10px;
-    padding-right: 10px;
-    overflow: auto;
-}
-
-.HomeDescription h2{
-    padding: 10px 0;
-    color: #7a5fd0;
-    border-bottom: 2px solid #AAA;
-    width: 95%;
-}
-.HomeDescriptionImage{
-    border: 2px solid #AAA;
-    float: left;
-    vertical-align: top;
-    width: 25%;
-    min-width: 200px;
-    max-width: 300px;
-    margin-right: 10px;
-}
-.HomeDescription p{
-    position: relative;
-    vertical-align: top;
-    min-width: 70%;
-    max-width: 98%;
+.homePage .secondPanel .secondPanelText{
+    width: 60%;
     text-align: left;
-    margin: 5px;
-}
-.HomeDescription ul{
-    display: block;
-    min-width: 70%;
-    max-width: 98%;
-    list-style-position: inside;
+    margin: 20px;
 }
 
-/*Home Story*/
-.HomeStory{
-    position: relative;
+.homePage .secondPanel .secondPanelText .bold{
+    font-weight: bold;
 }
-.HomeStory h3{
-    padding: 10px 10px 5px 5px;
-    color: #7a5fd0;
-    border-bottom: 2px solid #AAA;
-    width: 96%;
-    margin-left: 1%;
-}
-
-.HomeStory img{
-    width: 80px;
-    height: auto;
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
-}
-
-.HomeStory button{
-    background-color: #61BCCE;
-    color: #FFFFFF;
-    height: 35px;
-    font-size: 18px;
-    vertical-align: top;
-    margin-left: 30px;
-    margin-bottom: 10px;
-    border: none;
-}
-
-/*Link Cards*/
-.LinkCardContainer{
-    width: 98%;
-    margin: 10px auto;
-}
-
-.LinkCard{
-    display: inline-flex;
-    background-color: #FFFFFF;
-    box-shadow: 0px 1px 3px 0px #AAA;
-    vertical-align: top;
-    height: 150px;
-    width: 32%;
-    text-decoration: none;
-}
-.LinkCard:hover{
-    color: black;
-}
-
-.LinkCard + .LinkCard{
-    margin-left: 2%;
-}
-
-.LinkCard img{
-    display: block;
-    height: 50px;;
-}
-
-.LinkCard p{
-    display: block;
-}
-
-/*Disclaimer*/
-
-.Disclaimer{
-    width: 100%;
-    background-color: #FFFFFF;
-    color: rgba(0, 0, 0, 0.5);
-    font-size: smaller;
-    box-sizing: border-box;
-    padding: 5px 20px;
-    text-align: center;
+.homePage .secondPanel img{
+    vertical-align: center;
+    height: 300px;
 }
 
 @media screen and (max-width: 768px){
-    .LinkCard{
+    .homePageTripleImage .imageContainer{
+        display: block;
+        text-align: center;
+        justify-content: center;
+        margin: 10px 0;
+    }
+    .homePageTripleImage .imageContainer div{
         display: block;
         width: 100%;
-        margin: 0 auto;
+        margin: 0 1%;
     }
-    .LinkCard + .LinkCard{
+    .homePage .secondPanel{
+        display: block;
+    }
+
+    .homePage .secondPanel .secondPanelText{
+        display: block;
+        width: 98%;
+        text-align: center;
+        margin: 10px 1%;
+    }
+    .homePage .secondPanel img{
         margin: 0 auto;
+        display: block;
+        height: 150px;
     }
 }

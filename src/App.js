@@ -16,7 +16,7 @@ import AdminDashboard from './pages/AdminDashboard.jsx';
 import configureStore from './store/configureStore.js';
 import './css/Generic.css';
 
-const store = configureStore()
+const store = configureStore();
 
 class App extends Component {
   render() {
