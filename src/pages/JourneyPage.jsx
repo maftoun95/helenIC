@@ -55,7 +55,6 @@ export default class JourneyPage extends Component {
 					panelHeader="Want to learn more? Read My Story"
 					panelButton="My Story"
 				/>
-				<Disclaimer />
 			</div>
 		);
 	}
