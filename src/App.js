@@ -14,7 +14,6 @@ import NavContainer from './containers/NavContainer.jsx';
 import FooterContainer from './containers/FooterContainer.jsx';
 import AdminDashboard from './pages/AdminDashboard.jsx';
 import configureStore from './store/configureStore.js';
-import ResearchPage from './pages/ResearchPage.jsx';
 import './css/Generic.css';
 
 const store = configureStore();
