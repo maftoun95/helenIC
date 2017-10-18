@@ -17,7 +17,7 @@ import configureStore from './store/configureStore.js';
 import ResearchPage from './pages/ResearchPage.jsx';
 import './css/Generic.css';
 
-const store = configureStore()
+const store = configureStore();
 
 class App extends Component {
   render() {
