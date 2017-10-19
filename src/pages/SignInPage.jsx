@@ -2,7 +2,6 @@ import React from 'react';
 import SignInCard from '../components/SignInPage/SignInCard.jsx';
 import '../css/SignIn.css';
 
-
 export default class SignInPage extends React.Component {
     render() {
         return (

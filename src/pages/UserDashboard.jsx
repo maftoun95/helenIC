@@ -18,7 +18,7 @@ class UserDashboard extends Component {
         return (
             this.props.loggedIn ?
                 <div className={'userDashboard'}>
-                    <SidebarLeft className={'leftSidebar'} tabs={ tabs } />
+                    <SidebarLeft className={'leftSidebar'} tabs={tabs} />
                     <Route path='/UserDashboard/Submissions' component={Submissions} />
                     <SidebarRight className={'rightSidebar'} />
                 </div> :
@@ -29,7 +29,7 @@ class UserDashboard extends Component {
 
 function mapStateToProps(state, ownProps) {
     return {
-        loggedIn: state.loggedIn
+        loggedIn: state.userReducer.loggedIn
     }
 }
 

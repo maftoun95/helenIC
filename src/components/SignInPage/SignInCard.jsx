@@ -73,7 +73,7 @@ class SignInCard extends React.Component {
             const user = new CognitoUser({
                 Username: this.state.SignInEmail,
                 Pool: userPool
-            }); 
+            });
 
             const authenticationData = {
                 Username: this.state.SignInEmail,
@@ -102,15 +102,14 @@ class SignInCard extends React.Component {
         }
     }
 
-    saveUser(){
-        if(this.props.cogUser.username){
+    saveUser() {
+        if (this.props.cogUser.username) {
             return new Promise((resolve, reject) => {
                 this.props.cogUser.getUserAttributes((err, result) => {
-                    if(err)
-                    {
+                    if (err) {
                         reject(err);
                     }
-                    else{
+                    else {
                         this.props.actions.saveUserData(result);
                         resolve();
                     }
@@ -132,7 +131,7 @@ class SignInCard extends React.Component {
 
         let signInErrorClass = this.state.SignInError ? 'SignInError' : 'hidden';
         return (
-            this.props.loggedIn ? 
+            this.props.loggedIn ?
                 <Redirect to='/UserDashboard' /> :
                 <div className='SignInCard'>
                     <form id='SignInForm'>
@@ -148,16 +147,16 @@ class SignInCard extends React.Component {
 }
 
 
-function mapStateToProps(state, ownProps){
+function mapStateToProps(state, ownProps) {
     return {
-        loggedIn: state.loggedIn,
-        cogUser: state.cogUser
+        loggedIn: state.userReducer.loggedIn,
+        cogUser: state.userReducer.cogUser
     };
 }
 
-function mapDispatchToProps(dispatch){
+function mapDispatchToProps(dispatch) {
     return {
-        actions:bindActionCreators({userLogin, saveUserData}, dispatch)
+        actions: bindActionCreators({ userLogin, saveUserData }, dispatch)
     }
 }
 

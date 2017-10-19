@@ -4,13 +4,13 @@ const initialState = {
     cogUser: {}
 };
 
-export default function appReducer(state = initialState, action){
+export default function userReducer(state = initialState, action) {
     let tempState = Object.assign({}, state);
-    switch(action.type){
+    switch (action.type) {
         case 'USER_LOGIN':
-        tempState.loggedIn = true;
-        tempState.cogUser = action.data;
-        return tempState;
+            tempState.loggedIn = true;
+            tempState.cogUser = action.data;
+            return tempState;
 
         case 'SAVE_USER_DATA':
             let tempData = action.data.map((userAttribute) => {
@@ -19,16 +19,16 @@ export default function appReducer(state = initialState, action){
                 }
             });
             tempState.userData = tempData;
-        return tempState;
+            return tempState;
 
         case 'USER_LOGOUT':
             tempState.loggedIn = false;
             tempState.userData = {};
             tempState.cogUser.signOut();
             tempState.cogUser = {};
-        return tempState;
+            return tempState;
 
         default:
-        return state;
+            return state;
     }
 }

@@ -29,7 +29,6 @@ class App extends Component {
             <Route path='/About' component={AboutPage} />
             <Route path='/Research' component={ResearchPage} />
             <Route path='/Journey' component={JourneyPage} />
-            <Route path='/Research' component={ResearchPage} />
             <Route path='/Contact' component={ContactPage} />
             <Route path='/Join' component={JoinPage} />
             <Route path='/Signin' component={SignInPage} />
