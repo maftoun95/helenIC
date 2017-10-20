@@ -27,7 +27,11 @@ export default function userReducer(state = initialState, action) {
             tempState.cogUser.signOut();
             tempState.cogUser = {};
             return tempState;
-
+        case 'SIGNED_IN_USER_DATA_SUCCESS':
+            return {
+                ...state,
+                userData: action.data
+            }
         default:
             return state;
     }

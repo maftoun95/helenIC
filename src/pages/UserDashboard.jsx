@@ -11,15 +11,21 @@ import Submissions from '../components/Submissions.jsx';
 
 class UserDashboard extends Component {
     render() {
-        const tabs = [{
-            to: 'Submissions',
-            link: 'Submissions'
-        }];
+        const tabs = [
+            {
+                to: 'Submissions',
+                link: 'Submissions'
+            },
+            {
+                to: 'MagSoaks',
+                link: 'Magnesium Soaks'
+            }
+        ];
         return (
             this.props.loggedIn ?
                 <div className={'userDashboard'}>
                     <SidebarLeft className={'leftSidebar'} tabs={tabs} />
-                    <Route path='/UserDashboard/Submissions' component={Submissions} />
+                    <CenterDashboard className={'centerDashboard'} />
                     <SidebarRight className={'rightSidebar'} />
                 </div> :
                 <Redirect to='/' />

@@ -18,3 +18,10 @@ export function userLogout() {
         type: 'USER_LOGOUT'
     }
 }
+const SIGNED_IN_USER_DATA_SUCCESS = 'SIGNED_IN_USER_DATA_SUCCESS'
+export function signedInUserDataSuccess(data) {
+    return {
+        type: SIGNED_IN_USER_DATA_SUCCESS,
+        data
+    }
+}
