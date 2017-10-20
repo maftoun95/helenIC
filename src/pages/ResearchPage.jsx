@@ -2,7 +2,6 @@ import "../css/Research.css";
 import React from 'react';
 
 import PanelSection from './../components/PanelSection.jsx';
-import Disclaimer from './../components/Disclaimer.jsx'
 const ResearchPage = () => {
 	return (
 		<div className="researchWrapper">
@@ -22,7 +21,6 @@ const ResearchPage = () => {
 				panelHeader="Want to get involed? Join us!"
 				panelButton="Join"
 			/>
-			<Disclaimer />
 		</div>
 	)
 }

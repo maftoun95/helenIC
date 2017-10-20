@@ -8,20 +8,36 @@ import NavLink from './../components/NavLink.jsx';
 import '../css/Nav.css';
 
 class NavContainer extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         this.conditionalSignInRender = this.conditionalSignInRender.bind(this);
         this.handleLogout = this.handleLogout.bind(this);
     }
-    handleLogout(e){
+    handleLogout(e) {
         e.preventDefault();
         this.props.actions.userLogout();
     }
-    conditionalSignInRender(){
-        if(this.props.loggedIn){
-            return (<span className={'navLink'} onClick={this.handleLogout}>Sign Out</span>)
+    conditionalSignInRender() {
+        if (this.props.loggedIn) {
+            return (
+                <div>
+                    <NavLink className={'navLink'} linkTo={'userDashboard'} link={'Home'} />
+                    <NavLink className={'navLink'} linkTo={'/About'} link={'About'} />
+                    <NavLink className={'navLink'} linkTo={'/Journey'} link={'Journey'} />
+                    <NavLink className={'navLink'} linkTo={'/Research'} link={'Research'} />
+                    <span className={'navLink'} onClick={this.handleLogout}>Sign Out</span>
+                </div>
+            )
         }
-        return <NavLink className={'navLink'} linkTo={'Signin'} link={'Sign In'} />
+        return (
+            <div>
+                <NavLink className={'navLink'} linkTo={'/About'} link={'About'} />
+                <NavLink className={'navLink'} linkTo={'/Journey'} link={'Journey'} />
+                <NavLink className={'navLink'} linkTo={'/Research'} link={'Research'} />
+                <NavLink className={'navLink'} linkTo={'/Join'} link={'Join'} />
+                <NavLink className={'navLink'} linkTo={'Signin'} link={'Sign In'} />
+            </div>
+        )
     }
     render() {
         return (
@@ -30,10 +46,6 @@ class NavContainer extends Component {
                     <Image className={'navImage'} image={"../../pictures/master_logo.jpg"} />
                 </Link>
                 <div className={'linksBar'}>
-                    <NavLink className={'navLink'} linkTo={'/About'} link={'About'} />
-                    <NavLink className={'navLink'} linkTo={'/Journey'} link={'Journey'} />
-                    <NavLink className={'navLink'} linkTo={'/Research'} link={'Research'} />
-                    <NavLink className={'navLink'} linkTo={'/Join'} link={'Join'} />
                     {this.conditionalSignInRender()}
                 </div>
             </div>
@@ -41,16 +53,16 @@ class NavContainer extends Component {
     }
 }
 
-function mapStateToProps(state, ownProps){
-    return{
-        loggedIn: state.loggedIn,
-        userData: state.userData
+function mapStateToProps(state, ownProps) {
+    return {
+        loggedIn: state.userReducer.loggedIn,
+        userData: state.userReducer.userData
     }
 }
 
-function mapDispatchToProps(dispatch){
+function mapDispatchToProps(dispatch) {
     return {
-        actions: bindActionCreators({userLogout}, dispatch)
+        actions: bindActionCreators({ userLogout }, dispatch)
     }
 }
 
