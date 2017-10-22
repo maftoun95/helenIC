@@ -41,34 +41,34 @@ class AccordionItem extends Component {
     render() {
         const activeClass = this.state.active ? "active" : "inactive";
         const activeButton = this.state.active ? "-" : "+";
-        const post = this.props.details;
+        const accordionData = this.props.details;
         const textareaClass = activeClass + " accordion-formarea"
         return (
             <div className={activeClass}>
                 <div className='accordionItemToggler' onClick={this.toggle}>
                     <button className="accordion-button">{activeButton}</button>
-                    <span className="summary">{post.summary}</span>
+                    <span className="summary">{accordionData.date}</span>
                 </div>
-                    <span className="folding-panel answer">{post.answer}</span>
-                    <form
-                        onSubmit={this.handleFormSubmit}
-                        className={textareaClass}
-                    >
-                        <TextArea
-                            className="accordion-textarea"
-                            rows={5}
-                            cols={100}
-                            resize={false}
-                            content={this.state.content}
-                            name={'comments'}
-                            controlFunc={this.handleCommentsChange}
-                            placeholder={'comments'}
-                        />
-                        <input
-                            className="accordion-submitComment"
-                            type="submit"
-                            value="submit" />
-                    </form>
+                <span className="folding-panel answer">{accordionData.post}</span>
+                <form
+                    onSubmit={this.handleFormSubmit}
+                    className={textareaClass}
+                >
+                    <TextArea
+                        className="accordion-textarea"
+                        rows={5}
+                        cols={100}
+                        resize={false}
+                        content={this.state.content}
+                        name={'comments'}
+                        controlFunc={this.handleCommentsChange}
+                        placeholder={'comments'}
+                    />
+                    <input
+                        className="accordion-submitComment"
+                        type="submit"
+                        value="submit" />
+                </form>
             </div>
         )
     }

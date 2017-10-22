@@ -15,7 +15,7 @@ import FooterContainer from './containers/FooterContainer.jsx';
 import AdminDashboard from './pages/AdminDashboard.jsx';
 import configureStore from './store/configureStore.js';
 import './css/Generic.css';
-
+import asyncActions from './actions/asyncActions'
 const store = configureStore();
 
 class App extends Component {

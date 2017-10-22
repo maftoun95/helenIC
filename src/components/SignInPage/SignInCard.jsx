@@ -10,7 +10,8 @@ import { cognitoConfig } from '../../secrets/cognitoConfig.js';
 import InputLabel from '../InputLabel.jsx';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { userLogin, saveUserData } from '../../actions/appActions.js';
+import { userLogin, saveUserData, signedInUserDataSuccess } from '../../actions/userActions.js';
+import asyncActions from './../../actions/asyncActions'
 
 
 class SignInCard extends React.Component {
@@ -117,11 +118,16 @@ class SignInCard extends React.Component {
             });
         }
     }
+    fetchUserData() {
+        // calls asyncAction when user has logged in.
+        this.props.actions.asyncGetUserData()
+    }
     async handleSubmit(e) {
         e.preventDefault();
         try {
             await this.submit();
             await this.saveUser();
+            await this.fetchUserData();
         }
         catch (e) {
             console.log(e);
@@ -156,7 +162,7 @@ function mapStateToProps(state, ownProps) {
 
 function mapDispatchToProps(dispatch) {
     return {
-        actions: bindActionCreators({ userLogin, saveUserData }, dispatch)
+        actions: bindActionCreators({ userLogin, saveUserData, asyncGetUserData: asyncActions.getUserData }, dispatch)
     }
 }
 

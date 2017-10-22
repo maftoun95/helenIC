@@ -1,7 +1,9 @@
 import { combineReducers } from 'redux'
 
-import userReducer from './userReducer'
+import userReducer from './userReducer';
+import viewReducer from './viewReducer'
 const rootReducer = combineReducers({
-	userReducer
+	userReducer,
+	viewReducer
 })
 export default rootReducer;

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { userLogout } from '../actions/appActions.js';
+import { userLogout } from '../actions/userActions.js';
 import Image from './../components/Image.jsx';
 import NavLink from './../components/NavLink.jsx';
 import '../css/Nav.css';
