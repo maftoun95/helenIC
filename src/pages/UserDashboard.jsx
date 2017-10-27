@@ -8,14 +8,14 @@ import CenterDashboard from '../components/CenterDashboard.jsx';
 import '../css/UserDashboard.css';
 
 //done
-import Submissions from '../components/Submissions.jsx';
+import Submissions from '../components/UserDashboard/Submissions.jsx';
 //wip
-import Nutrition from '../components/Nutrition.jsx';
-import LowPhenolFoods from '../components/LowPhenolFoods.jsx';
-import MagnesiumSoaks from '../components/MagnesiumSoaks.jsx';
-import TestResults from '../components/TestResults.jsx';
-import WordsFromHelen from '../components/WordsFromHelen.jsx';
-import AccountSettings from '../components/AccountSettings.jsx';
+import Nutrition from '../components/UserDashboard/Nutrition.jsx';
+import LowPhenolFoods from '../components/UserDashboard/LowPhenolFoods.jsx';
+import MagnesiumSoaks from '../components/UserDashboard/MagnesiumSoaks.jsx';
+import TestResults from '../components/UserDashboard/TestResults.jsx';
+import WordsFromHelen from '../components/UserDashboard/WordsFromHelen.jsx';
+import AccountSettings from '../components/UserDashboard/AccountSettings.jsx';
 
 
 class UserDashboard extends Component {
