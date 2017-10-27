@@ -7,7 +7,16 @@ import SidebarRight from '../components/SidebarRight.jsx';
 import CenterDashboard from '../components/CenterDashboard.jsx';
 import '../css/UserDashboard.css';
 
+//done
 import Submissions from '../components/Submissions.jsx';
+//wip
+import Nutrition from '../components/Nutrition.jsx';
+import LowPhenolFoods from '../components/LowPhenolFoods.jsx';
+import MagnesiumSoaks from '../components/MagnesiumSoaks.jsx';
+import TestResults from '../components/TestResults.jsx';
+import WordsFromHelen from '../components/WordsFromHelen.jsx';
+import AccountSettings from '../components/AccountSettings.jsx';
+
 
 class UserDashboard extends Component {
     render() {
@@ -17,16 +26,45 @@ class UserDashboard extends Component {
                 link: 'Submissions'
             },
             {
-                to: 'MagSoaks',
+                to: 'Nutrition',
+                link: 'Food, Water, Exercise & Supplement Requirements'
+            },
+            {
+                to: 'LowPhenolFoods',
+                link: 'Low Phenol Foods'
+            },
+            {
+                to: 'MagnesiumSoaks',
                 link: 'Magnesium Soaks'
-            }
+            },
+            {
+                to: 'TestResults',
+                link: 'Test Results'
+            },
+            {
+                to: 'WordsFromHelen',
+                link: 'Words From Helen'
+            },
+            {
+                to: 'AccountSettings',
+                link: 'Account Settings'
+            },
+            
         ];
+        //return to this.props.loggedIn
         return (
-            this.props.loggedIn ?
+            this.props ?
                 <div className={'userDashboard'}>
                     <SidebarLeft className={'leftSidebar'} tabs={tabs} />
-                    <CenterDashboard className={'centerDashboard'} />
-                    <SidebarRight className={'rightSidebar'} />
+                    <div className={'userDashboardContent'} >
+                        <Route path='/UserDashboard/Submissions' component={Submissions} />
+                        <Route path='/UserDashboard/Nutrition' component={Nutrition} />
+                        <Route path='/UserDashboard/LowPhenolFoods' component={LowPhenolFoods} />
+                        <Route path='/UserDashboard/MagnesiumSoaks' component={MagnesiumSoaks} />
+                        <Route path='/UserDashboard/TestResults' component={TestResults} />
+                        <Route path='/UserDashboard/WordsFromHelen' component={WordsFromHelen} />
+                        <Route path='/UserDashboard/AccountSettings' component={AccountSettings} />
+                    </div>
                 </div> :
                 <Redirect to='/' />
         )

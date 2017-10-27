@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
 
-export default class Submission extends Component {
+export default class TestResults extends Component {
     render(){
         return(
-            <h3>Submission</h3>
+            <h3>Test Results</h3>
         )
     }
 }

@@ -138,7 +138,7 @@ class SignInCard extends React.Component {
         let signInErrorClass = this.state.SignInError ? 'SignInError' : 'hidden';
         return (
             this.props.loggedIn ?
-                <Redirect to='/UserDashboard' /> :
+                <Redirect to='/UserDashboard/Submissions' /> :
                 <div className='SignInCard'>
                     <form id='SignInForm'>
                         <InputLabel id={'SignInEmail'} type={'email'} labelText={'Email: '} value={this.state.LoginEmail} error={this.state.EmailError} onChange={this.handleChange} />
