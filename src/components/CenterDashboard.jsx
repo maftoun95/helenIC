@@ -27,20 +27,3 @@ const mapStateToProps = (state, ownProp) => {
 }
 
 export default connect(mapStateToProps)(CenterDashboard);
-
-// store.viewState.currentDas
-
-// function mapStateToProps(state) {
-//     state = {
-//         viewstate,
-//         userInfo
-//     }
-
-//     viewstate = {
-//         options: {
-//             []categories
-//         }
-//         return state.userInfo[viewState.selectedCategory]
-//     }
-//     return
-// }
